@@ -7,6 +7,7 @@ Note: You are NOT allowed to copy any content from the scrum board, including te
 # Introduction
 (about 150-200 words)
 Discuss the design of the project. What does this project/product do? Who are the users? What are the technologies you have used? (e.g. bash, docker, git, etc..)
+
 A RDBMS data with collected data about each node/servers in the networks hardware specifications as well as resource usages (CPU/Memory) for the Jarvis Linux Cluster Administration (LCA) which manages a linux cluster of 10 nodes/servers running CentOS7 
 ans they want to use this data for reports and planning purposes.
 
