@@ -30,7 +30,7 @@ server is up and running every minute and inserting into database table host_usa
 the database tables if not created already and a psql_docker.sh file which creates, stops or starts an instance of the psql docker container.
 ## Architecture
 Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io website). Image must be saved to the `assets` directory.
-
+![title](assets/hi.drawio.png)
 ## Scripts
 Shell script description and usage (use markdown code block for script usage)
 - psql_docker.sh: creates starts or stops psql docker instance
