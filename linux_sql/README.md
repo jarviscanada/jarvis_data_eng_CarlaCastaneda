@@ -49,7 +49,7 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 
 | `Label`    	   | `Name`             | `Type`             | `Nullable` | `Default` | `Comment` |
 | ---------------- | ------------------ | ------------------ | ---------- | --------- | --------- |
-| id        	   | host_id            | int auto_increment | `false`    |           |           |
+| id        	   | host_id            | int auto_increment | `false`    | PRIMARY KEY          |           |
 | hostname   	   | LastName           | varchar(50) UNIQUE | `false`    |           |           |
 | cpu_number 	   | cpu_number         | varchar(50)        | `false`    |           |           |
 | cpu_architecture | cpu_architecture   | varchar(50)        | `false`    |           |           |
@@ -66,7 +66,7 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 | `Label`    	   | `Name`             | `Type`             | `Nullable` | `Default` | `Comment` |
 | ---------------- | ------------------ | ------------------ | ---------- | --------- | --------- |
 | timestamp        | timestamp          | TIMESTAMP          | `false`    |           |           |
-| host_id   	   | host_id            | INT                | `false`    |           |           |
+| host_id   	   | host_id            | INT                | `false`    |    FOREIGN KEY       |           |
 | memory_free 	   | memory_free        | INT                | `false`    |           |           |
 | cpu_idle         | cpu_idle           | INT                | `false`    |           |           |
 | cpu_kernel       | cpu_kernel         | INT                | `false`    |           |           |
