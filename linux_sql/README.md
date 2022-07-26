@@ -14,7 +14,7 @@ ans they want to use this data for reports and planning purposes.
 The technologies  used to complete this project include include bash, git, docker,linux
 # Quick Start
 Use markdown code block for your quick-start commands
-- Start a psql instance using psql_docker.sh `./scripts/psql_docker.sh start|stop|create [db_username][db_pass]`
+- Start a psql instance using psql_docker.sh `./scripts/psql_docker.sh start`
 - Create tables using ddl.sql `./sql/ddl.sql `
 - Insert hardware specs data into the DB using host_info.sh `./scripts/host_info.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]`
 - Insert hardware usage data into the DB using host_usage.sh `./scripts/host_usage.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]`
@@ -33,9 +33,9 @@ Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io web
 ![title](assets/hi.drawio.png)
 ## Scripts
 Shell script description and usage (use markdown code block for script usage)
-- psql_docker.sh: creates starts or stops psql docker instance
-- host_info.sh: gathers hardware specs about current host and inserts into host_info database table
-- host_usage.sh: gathers server usage data about current host and inserts into host_usage database table
+- psql_docker.sh: creates starts or stops psql docker instance `./scripts/psql_docker.sh start|stop|create [db_username][db_pass]`
+- host_info.sh: gathers hardware specs about current host and inserts into host_info database table `./scripts/host_info.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]`
+- host_usage.sh: gathers server usage data about current host and inserts into host_usage database table `./scripts/host_usage.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]`
 - crontab: used to execute script every minute. contab file is edited to include the 
 script we are trying to execute every minute.
 - queries.sql (describe what business problem you are trying to resolve)
