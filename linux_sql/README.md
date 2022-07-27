@@ -40,7 +40,7 @@ Shell script description and usage (use markdown code block for script usage)
 script we are trying to execute every minute.
 - queries.sql (describe what business problem you are trying to resolve)
   the manager wants to use the information collected in the database table to manage the resources of
-the cluster better with a few queries such as sorting the hosts by memory size, their average memroy usage over 5 minute intervals
+the cluster better with a few queries such as sorting the hosts by memory size, their average memory usage over 5 minute intervals
 and checking whenever the server fails.
 
 ## Database Modeling
