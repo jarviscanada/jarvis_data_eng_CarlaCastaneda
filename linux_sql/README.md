@@ -50,7 +50,7 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 | `Label`    	   | `Name`             | `Type`             | `Nullable` | `Default` | `Comment` |
 | ---------------- | ------------------ | ------------------ | ---------- | --------- | --------- |
 | id        	   | host_id            | int auto_increment | `false`    | PRIMARY KEY          |           |
-| hostname   	   | LastName           | varchar(50) UNIQUE | `false`    |           |           |
+| hostname   	   | LastName           | varchar(50) UNIQUE | `false`    |           |  UNIQUE KEY         |
 | cpu_number 	   | cpu_number         | varchar(50)        | `false`    |           |           |
 | cpu_architecture | cpu_architecture   | varchar(50)        | `false`    |           |           |
 | cpu_model        | cpu_model          | varchar(50)        | `false`    |           |           |
@@ -66,7 +66,7 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 | `Label`    	   | `Name`             | `Type`             | `Nullable` | `Default` | `Comment` |
 | ---------------- | ------------------ | ------------------ | ---------- | --------- | --------- |
 | timestamp        | timestamp          | TIMESTAMP          | `false`    |           |           |
-| host_id   	   | host_id            | INT                | `false`    |    FOREIGN KEY       |           |
+| host_id   	   | host_id            | INT                | `false`    |    FOREIGN KEY       |   pointing to 'id' primary key of host_info table        |
 | memory_free 	   | memory_free        | INT                | `false`    |           |           |
 | cpu_idle         | cpu_idle           | INT                | `false`    |           |           |
 | cpu_kernel       | cpu_kernel         | INT                | `false`    |           |           |
@@ -79,9 +79,10 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 How did you test your bash scripts and SQL queries? What was the result?
 
 I used Intelliji Ultimates built in database tool to troubleshoot and test SQL queries.
-for the bash scripts I was able to test and troubleshoot them with the
+for the bash scripts I was able to test and troubleshoot them with the bash commands
 # Deployment
 How did you deploy your app? (e.g. Github, crontab, docker)
+using Github 
 
 # Improvements
 Write at least three things you want to improve 
