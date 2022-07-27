@@ -21,13 +21,13 @@ Use markdown code block for your quick-start commands
 - Crontab setup `bash> crontab -e` insert into the file `* * * * * bash /home/centos/dev/jrvs/linux_sql/scripts/host_usage.sh localhost 5432 host_agent postgres password > /tmp/host_usage.log`
 
 # Implemenation
-Discuss how you implement the project.
-created a psql instance with docker. from there created a database called host_agent with tables 
+
+created a psql instance with docker. from there created a database called host_agent using PSQL REPL and the ddl.sql file which contains
+sql ddl statments to created tables called 
 host_info and host_usage which would store information about hardware specs and server usage.
-created scripts host_info.sh and host_usage.sh to collect this information via bash commands
+created shell scripts host_info.sh and host_usage.sh to collect this information via bash commands
 stored in variables and inserted into the database tables respectively. host_usage.sh should execute evertime
-server is up and running every minute and inserting into database table host_usage. we also have a ddl.sql file which created
-the database tables if not created already and a psql_docker.sh file which creates, stops or starts an instance of the psql docker container.
+server is up and running every minute and inserting into database table host_usage which was implemented using crontab in Linux. we also have a ddl.sql file which createdthe database tables if not created already and a psql_docker.sh shell script which creates, stops or starts an instance of the psql docker container.
 ## Architecture
 Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io website). Image must be saved to the `assets` directory.
 ![title](assets/hi.drawio.png)
@@ -81,8 +81,8 @@ How did you test your bash scripts and SQL queries? What was the result?
 I used Intelliji Ultimates built in database tool to troubleshoot and test SQL queries.
 for the bash scripts I was able to test and troubleshoot them with the bash commands
 # Deployment
-How did you deploy your app? (e.g. Github, crontab, docker)
-using Github 
+
+Github 
 
 # Improvements
 Write at least three things you want to improve 
