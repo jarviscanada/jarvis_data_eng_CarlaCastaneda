@@ -36,7 +36,7 @@ Shell script description and usage (use markdown code block for script usage)
 - psql_docker.sh: creates starts or stops psql docker instance `./scripts/psql_docker.sh start|stop|create [db_username][db_pass]`
 - host_info.sh: gathers hardware specs about current host and inserts into host_info database table `./scripts/host_info.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]`
 - host_usage.sh: gathers server usage data about current host and inserts into host_usage database table `./scripts/host_usage.sh [psql_host] [psql_port] [db_name] [psql_user] [psql_password]`
-- crontab: used to execute script every minute. contab file is edited to include the 
+- crontab: command used to execute script every minute. contab file is edited to include the 
 script we are trying to execute every minute.
 - queries.sql (describe what business problem you are trying to resolve)
   the manager wants to use the information collected in the database table to manage the resources of
