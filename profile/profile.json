@@ -1,0 +1,134 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "Entrace Scholarship- Faculty of Science",
+        "Dean's List (2017, 2018): Faculty of Science",
+        "Dean's List (2020, 2021): Faculty of Science",
+        "GPA: 10.56/12",
+        "Graduated With Distinction"
+      ],
+      "degree": "Honours Bachelor of Science",
+      "department": "Computer Science",
+      "duration": "2017-2022",
+      "school_name": "Wilfrid Laurier University"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda",
+  "highlighted_projects": [
+    {
+      "description": "Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Used Google Firebase to implement user login and mongodb to store users and movies.",
+      "git_url": "https://github.com/carlaac99/CP470finalproject",
+      "name": "CuddleBug App"
+    },
+    {
+      "description": "Implemented the AC-3 Algorithm (Arc consistency algorithm) which is able to solve a sudoku puzzle. Used Javacript, React, Flask, Python",
+      "git_url": "https://github.com/carlaac99/SudokuAC3",
+      "name": "Sudoku Puzzle Solver"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": [
+        "Created a Monitoring Agent program using Bash scripts which collect hardward specs and memory usage data from ",
+        "Using PSQLSQL,Docker, Linux/Bash,git,shell scripts"
+      ],
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    },
+    {
+      "description": [
+        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      ],
+      "git_url": "/core_java",
+      "name": "Core Java Apps"
+    },
+    {
+      "description": "",
+      "git_url": "/springboot",
+      "name": "Springboot App"
+    },
+    {
+      "description": "",
+      "git_url": "/python_data_anlytics",
+      "name": "Python Data Analytics"
+    },
+    {
+      "description": "",
+      "git_url": "/hadoop",
+      "name": "Hadoop"
+    },
+    {
+      "description": "",
+      "git_url": "/spark",
+      "name": "Spark"
+    },
+    {
+      "description": "",
+      "git_url": "/cloud_devops",
+      "name": "Cloud/DevOps"
+    }
+  ],
+  "name": "Carla Castaneda",
+  "others": [
+    {
+      "bullets": [
+        "Video Editing",
+        "Advertising and Marketing",
+        "Social Media Marketing",
+        "Jupyter Notebooks",
+        "Eclipse IDE"
+      ],
+      "title": "Other Skills"
+    },
+    {
+      "bullets": [
+        "Dance",
+        "Painting",
+        "Volunteering",
+        "Outdoor Activities"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "Develop Full stack solutions using programs and application for clients with differing business needs ",
+      "duration": "2020-present",
+      "title": "Software Developer"
+    },
+    {
+      "company": "Code Ninjas",
+      "description": "Introduced students to programming concepts using Javascript and Code Ninjas curriculum. Created, Implemented and Managed student progress feedback system for parents and built strong relationships with parents and students",
+      "duration": "2019",
+      "title": "Tutor"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Javascript",
+      "HTML/CSS",
+      "Agile/Scrum",
+      "C",
+      "Android Studio"
+    ],
+    "familiar": [
+      "Linux/Bash",
+      "Docker",
+      "PHP",
+      "React.js",
+      "VBA"
+    ],
+    "proficient": [
+      "Java",
+      "Data Structures",
+      "RDBMS/SQL",
+      "Python",
+      "Git"
+    ]
+  },
+  "summary": "I am a recent Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community . I feel most fulfilled when I am able to help solve a problem using my creativity while also challenging myself and learning new skills. I am most excited about how artificial Intelligence will progress and help better the lives of people around the world by providing solutions for many global as well as local issues."
+}
