@@ -8,10 +8,10 @@ Note: You are NOT allowed to copy any content from the scrum board, including te
 (about 150-200 words)
 Discuss the design of the project. What does this project/product do? Who are the users? What are the technologies you have used? (e.g. bash, docker, git, etc..)
 
-LCA wants to manage a cluser of linux computers and wants to collect server usage about each host every minue that the server is healthy and running.
+LCA wants to manage a cluser of linux computers connected through a switch in a network and wants to collect server usage about each host every minue that the server is healthy and running.
 The project has a RDBMS database using a psql instance from docker, with collected data about each node/servers in the networks hardware specifications as well as resource usages (CPU/Memory) for the Jarvis Linux Cluster Administration (LCA) which manages a linux cluster of 10 nodes/servers running CentOS7 
 and they want to use this data for reports and planning purposes. The LCA manager will be able to see the collected data in the database 
-and find ways to manage the cluster for efficiently.
+and find ways to manage the cluster for efficiently. 
 
 The technologies used to complete this project include include bash and shell scripts, git, docker, linux command lines, postgresSQL, Intelliji
 
@@ -30,7 +30,7 @@ sql ddl statments to created tables called
 host_info and host_usage which would store information about hardware specs and server usage.
 created shell scripts host_info.sh and host_usage.sh to collect this information via bash commands
 stored in variables and inserted into the database tables respectively. host_usage.sh should execute evertime
-server is up and running every minute and inserting into database table host_usage which was implemented using crontab in Linux. we also have a ddl.sql file which createdthe database tables if not created already and a psql_docker.sh shell script which creates, stops or starts an instance of the psql docker container.
+server is up and running every minute and inserting into database table host_usage which was implemented using crontab in Linux. we also have a ddl.sql file which createdthe database tables if not created already and a psql_docker.sh shell script which creates, stops or starts an instance of the psql docker container. The SQL scripts used to gather data from the database contain average memory uses over 5 minute intervals of each host
 Used git and github to keep track of feature branches and devlopment changes throughout the project.
 
 ## Architecture
