@@ -84,12 +84,12 @@ professional_experience:
   #Write your Jarvis role as a professional experience rather than training.
   - title: "Software Developer"
     company: "Jarvis"
-    duration: "2020-present"
+    duration: "2022-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: "Develop Full stack solutions using programs and application for clients with differing business needs "
   - title: "Tutor"
     company: "Code Ninjas"
-    duration: "2019"
+    duration: "2020-2021"
     description: "Introduced students to programming concepts using Javascript and Code Ninjas curriculum.
  Created, Implemented and Managed student progress feedback system for parents and built strong relationships with parents and students"
 
