@@ -89,6 +89,7 @@ tested against testing data to verify sql scripts were correct
 # Deployment
 
 using Github to keep code , and host_usage script is managed by the crontab job.
+Database is managed by Docker using psql instance.
 
 # Improvements
 
