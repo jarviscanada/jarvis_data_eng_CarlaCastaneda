@@ -8,10 +8,13 @@ Note: You are NOT allowed to copy any content from the scrum board, including te
 (about 150-200 words)
 Discuss the design of the project. What does this project/product do? Who are the users? What are the technologies you have used? (e.g. bash, docker, git, etc..)
 
-A RDBMS data with collected data about each node/servers in the networks hardware specifications as well as resource usages (CPU/Memory) for the Jarvis Linux Cluster Administration (LCA) which manages a linux cluster of 10 nodes/servers running CentOS7 
-ans they want to use this data for reports and planning purposes.
+LCA wants to manage a cluser of linux computers and wants to collect server usage about each host every minue that the server is healthy and running.
+The project has a RDBMS database using a psql instance from docker, with collected data about each node/servers in the networks hardware specifications as well as resource usages (CPU/Memory) for the Jarvis Linux Cluster Administration (LCA) which manages a linux cluster of 10 nodes/servers running CentOS7 
+and they want to use this data for reports and planning purposes. The LCA manager will be able to see the collected data in the database 
+and find ways to manage the cluster for efficiently.
 
-The technologies  used to complete this project include include bash, git, docker,linux
+The technologies used to complete this project include include bash and shell scripts, git, docker, linux command lines, postgresSQL, Intelliji
+
 # Quick Start
 Use markdown code block for your quick-start commands
 - Start a psql instance using psql_docker.sh `./scripts/psql_docker.sh start`
@@ -28,6 +31,8 @@ host_info and host_usage which would store information about hardware specs and 
 created shell scripts host_info.sh and host_usage.sh to collect this information via bash commands
 stored in variables and inserted into the database tables respectively. host_usage.sh should execute evertime
 server is up and running every minute and inserting into database table host_usage which was implemented using crontab in Linux. we also have a ddl.sql file which createdthe database tables if not created already and a psql_docker.sh shell script which creates, stops or starts an instance of the psql docker container.
+Used git and github to keep track of feature branches and devlopment changes throughout the project.
+
 ## Architecture
 Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io website). Image must be saved to the `assets` directory.
 ![title](assets/hi.drawio.png)
@@ -79,14 +84,14 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 How did you test your bash scripts and SQL queries? What was the result?
 
 I used Intelliji Ultimates built in database tool to troubleshoot and test SQL queries.
-for the bash scripts I was able to test and troubleshoot them with the bash commands
+for the bash scripts I was able to test and troubleshoot them with the bash commands using vim command 
+tested against testing data to verify sql scripts were correct
 # Deployment
 
-Github 
+using Github to keep code , and host_usage script is managed by the crontab job.
 
 # Improvements
-Write at least three things you want to improve 
-e.g. 
+
 - handle hardware update 
-- blah
-- blah
+- handle deployment
+- SQL queries (testing and effiency)
