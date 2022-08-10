@@ -40,24 +40,56 @@ public class JavaGrepImp implements JavaGrep {
 
     }
 
-
-
-
   }
 
 
   @Override
   public void process() throws IOException {
-    List<String> matchedLines= new ArrayList<>();
+    List<String> matchedLines = new ArrayList<>();
+
+    List<File> Files = listFiles(rootPath);
+
+    for (int i=0;i<Files.size();i++) {
+
+      if (Files.get(i).isDirectory()) {
+
+        List<File> childFile = listFiles(Files.get(i).getAbsolutePath());
+        Files.addAll(childFile);
 
 
+      } else {
+        for (String line : readLines(Files.get(i))) {
+          if (containsPattern(line)) {
+            matchedLines.add(line);
+          }
+
+        }
+
+
+      }
+
+
+
+    }
+    writeToFile(matchedLines);
 
   }
 
   @Override
   public List<File> listFiles(String rootDir) {
 
-    return null;
+    List<File> allFiles= new ArrayList<File>();
+    File dir= new File(rootDir);
+
+    for (File file: dir.listFiles()){
+
+
+       allFiles.add(file);
+
+
+    }
+
+    return allFiles;
   }
 
   @Override
@@ -93,17 +125,15 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public void writeToFile(List<String> lines) throws IOException {
-    try{
-      BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(this.outFile));
 
-      for (int i=0;i<lines.size();i++)
-        bufferedWriter.write(lines.get(i));
-      bufferedWriter.close();
+    File out=new File(this.outFile);
+    out.createNewFile();
+    BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(out));
 
+    for (int i=0;i<lines.size();i++)
+      bufferedWriter.write(lines.get(i) + "\r\n");
+    bufferedWriter.close();
 
-    } catch (IOException e){
-
-    }
 
 
   }
