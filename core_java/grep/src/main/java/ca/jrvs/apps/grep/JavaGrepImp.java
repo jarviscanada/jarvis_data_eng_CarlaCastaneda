@@ -192,7 +192,7 @@ public class JavaGrepImp implements JavaGrep {
 
   @Override
   public String getOutFile() {
-    return this.getOutFile();
+    return this.outFile;
   }
 
   @Override
