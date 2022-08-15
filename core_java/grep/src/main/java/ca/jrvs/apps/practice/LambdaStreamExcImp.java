@@ -111,11 +111,14 @@ public class LambdaStreamExcImp implements LambdaStreamExc {
 
   @Override
   public void printOdd(IntStream intStream, Consumer<String> printer) {
-    int[] results=intStream.filter(i-> i%2!=0).toArray();
+//    int[] results=intStream.filter(i-> i%2!=0).toArray();
 
-    for (int i:results){
-      printer.accept(String.valueOf(i));
-    }
+    intStream.filter(i-> i%2!=0).mapToObj(i-> String.valueOf(i)).forEach(i->printer.accept(i));
+
+//
+//    for (int i:results){
+//      printer.accept(String.valueOf(i));
+//    }
 
 
   }
