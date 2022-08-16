@@ -48,6 +48,10 @@ Discuss the memory issue and how would you fix it
 # Test
 How did you test your application manually? (e.g. prepare sample data, run some test cases manually, compare result)
 
+Intelliji built-in debugger was used whenever errors were encountered while running tests and I was able to find the solution pretty quickly.
+
+for testing I used the main function to create class objects and run them in order to make sure everything was working smoothly, also used Junit used for unit testing functions in JavaGrepImp class
+
 # Deployment
 How you dockerize your app for easier distribution?
 
