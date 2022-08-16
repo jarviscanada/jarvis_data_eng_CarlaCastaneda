@@ -14,6 +14,15 @@ Lambda expressions, Regex API provided by java JRE and JDK distributions. The ID
 # Quick Start
 How to use your apps? 
 
+Using Docker:
+
+`docker run --rm \
+-v `pwd`/data:/data -v `pwd`/log:/log \
+${docker_user}/grep .*Romeo.*Juliet.* /data /log/grep.out`
+
+Using command line in Linux ( assuming all files and dependecies are set up on client computer properly):
+`java -jar grep-demo.jar ${regex_pattern} ${src_dir} ./out/${outfile}`
+
 #Implemenation
 ## Pseudocode
 write `process` method pseudocode.
