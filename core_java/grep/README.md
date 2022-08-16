@@ -28,6 +28,25 @@ Using command line in Linux ( assuming all files and dependecies are set up on c
 ## Pseudocode
 write `process` method pseudocode.
 
+```
+for (files in directory) {
+  if (file is a firectory){
+    add child files 
+  }else{
+    readlines in file {
+      if contains regex pattern {
+      write to output file
+      {
+    }
+      
+  }
+  
+}
+  
+
+```
+
+
 ## Performance Issue
 (30-60 words)
 Discuss the memory issue and how would you fix it
