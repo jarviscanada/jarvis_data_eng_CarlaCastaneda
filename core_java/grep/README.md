@@ -29,20 +29,14 @@ Using command line in Linux ( assuming all files and dependecies are set up on c
 write `process` method pseudocode.
 
 ```
-for (files in directory) {
-  if (file is a firectory){
+for (files in directory):
+
+  if (file is a directory):
     add child files 
-  }else{
-    readlines in file {
-      if contains regex pattern {
-      write to output file
-      {
-    }
-      
-  }
-  
-}
-  
+  else:
+    readlines in file:
+      if contains regex pattern:
+        write to output file
 
 ```
 
