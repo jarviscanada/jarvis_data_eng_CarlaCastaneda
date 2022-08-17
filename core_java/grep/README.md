@@ -67,7 +67,7 @@ created a docker image of my app for easy distribution:
 
 1. created a dockerfile with following contents:
 
-```FROM openjdk:8-alpine\n COPY target/grep*.jar /usr/local/app/grep/lib/grep.jar \nENTRYPOINT ["java","-jar","/usr/local/app/grep/lib/grep.jar"]```
+```FROM openjdk:8-alpine \n COPY target/grep*.jar /usr/local/app/grep/lib/grep.jar \n ENTRYPOINT ["java","-jar","/usr/local/app/grep/lib/grep.jar"]```
 
 
 # Improvement
