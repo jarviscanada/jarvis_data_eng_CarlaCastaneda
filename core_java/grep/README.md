@@ -48,6 +48,9 @@ Discuss the memory issue and how would you fix it
 The problem I was presented with was assuming we want our grep app to proces large amounts of data that is bigger than physical memory with a small heap memory size.
 The best way to fix this is using Stream Apis and bufferReader to read the files.
 
+Using Stream Api's instead of collections allows us to work with continous data with no set size. streams dont use storage of its own. wahtever the streams input source is (whether it be a collection or array) is what resides in heap memory. The streams pipeline allows for this as it does not require data to be  stored into a collection before being processed by stream operations. the pipeline allwos for streams to be immedieatly passed to other operations without the need of temporary collections. therefore because it doesnt take up any memory of its own, streams are much more memory efficient
+
+As for the bufferReader allows data to be read in large chunks from hard drive instead of byte by byte which can be very inefficient for large data files. bufferreader has bigger buffer memory than other readers.
 
 # Test
 How did you test your application manually? (e.g. prepare sample data, run some test cases manually, compare result)
@@ -60,6 +63,8 @@ Used `cat` to view contents of outfile to confirm the writetoFiles method had ex
 
 # Deployment
 How you dockerize your app for easier distribution?
+
+`docker run`
 
 # Improvement
 List three things you can improve in this project.
