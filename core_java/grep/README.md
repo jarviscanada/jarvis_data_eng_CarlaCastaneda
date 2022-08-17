@@ -72,6 +72,15 @@ FROM openjdk:8-alpine
 COPY target/grep*.jar /usr/local/app/grep/lib/grep.jar 
 ENTRYPOINT ["java","-jar","/usr/local/app/grep/lib/grep.jar"]
 ```
+2. build the image:
+  `docker build -t carlagcasta/grep .`
+3. run the container:
+  ```
+outfile=grep.out
+docker run --rm \
+-v `pwd`/data:/data -v `pwd`/log:/log \
+${docker_user}/grep ${regex_pattern} /data /log/${outfile}
+```
 
 
 # Improvement
