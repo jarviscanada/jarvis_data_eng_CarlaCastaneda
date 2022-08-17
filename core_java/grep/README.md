@@ -50,7 +50,9 @@ How did you test your application manually? (e.g. prepare sample data, run some 
 
 Intelliji built-in debugger was used whenever errors were encountered while running tests and I was able to find the solution pretty quickly.
 
-for testing I used the main function to create class objects and run them in order to make sure everything was working smoothly, also used Junit used for unit testing functions in JavaGrepImp class
+for testing I used the main function to create class objects and run them in order to make sure everything was working smoothly, also used Junit used for unit testing functions in JavaGrepImp class. Used the romeo and juliet data.txt file to test the overrall application, as sample data and compared answers to confirm it had executed as intended.
+
+Used `cat` to view contents of outfile to confirm the writetoFiles method had executed properly.
 
 # Deployment
 How you dockerize your app for easier distribution?
