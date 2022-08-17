@@ -63,7 +63,12 @@ Used `cat` to view contents of outfile to confirm the writetoFiles method had ex
 # Deployment
 How you dockerize your app for easier distribution?
 
-created a docker image of my app for easy distribution
+created a docker image of my app for easy distribution:
+
+1. created a dockerfile:
+  `FROM openjdk:8-alpine
+COPY target/grep*.jar /usr/local/app/grep/lib/grep.jar
+ENTRYPOINT ["java","-jar","/usr/local/app/grep/lib/grep.jar"]`
 
 
 # Improvement
