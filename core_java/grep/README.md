@@ -16,7 +16,7 @@ How to use your apps?
 
 Using Docker:
 `outfile=grep.out`
-`rege_pattern=.*Romeo.*Juliet.*`
+`regex_pattern=.*Romeo.*Juliet.*`
 
 `docker run --rm \
 -v ${pwd} /data:/data -v ${pwd}/log:/log \
@@ -25,6 +25,8 @@ ${docker_user}/grep .*Romeo.*Juliet.* /data /log/grep.out`
 Using command line in Linux ( assuming all files and dependecies are set up on client computer properly):
 
 `java -jar grep-demo.jar ${regex_pattern} ${src_dir} /log/${outfile}`
+
+`java -jar target/grep-1.0-SNAPSHOT.jar .*Romeo.*Juliet.* ./data ./log${outfile}`
 
 #Implemenation
 ## Pseudocode
