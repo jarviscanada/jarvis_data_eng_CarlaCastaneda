@@ -28,7 +28,7 @@ Using command line in Linux ( assuming all files and dependecies are set up on c
 ## Pseudocode
 write `process` method pseudocode.
 
-```java
+```
 for (files in directory):
 
   if (file is a directory):
