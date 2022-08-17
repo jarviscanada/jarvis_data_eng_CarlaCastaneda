@@ -45,6 +45,10 @@ for (files in directory):
 (30-60 words)
 Discuss the memory issue and how would you fix it
 
+The problem I was presented with was assuming we want our grep app to proces large amounts of data that is bigger than physical memory with a small heap memory size.
+The best way to fix this is using Stream Apis and bufferReader to read the files.
+
+
 # Test
 How did you test your application manually? (e.g. prepare sample data, run some test cases manually, compare result)
 
@@ -59,3 +63,6 @@ How you dockerize your app for easier distribution?
 
 # Improvement
 List three things you can improve in this project.
+1. In order to optimize/ make more efficient with large data sets return stream intermediate operations rather than lists/collections
+2. Override process function since return value type of methods would be different.
+3. create a new interface to make abstract functions which return streams instead of list<string> and can then be implemented as such in main class.
