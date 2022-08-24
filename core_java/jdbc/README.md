@@ -12,6 +12,9 @@ Technologies used are JDBC to manipulate data in database using CRUD operations 
 ## Design Patterns
 Discuss DAO and Repository design patterns (150-200 words)
 
+DAO is a Data Access Object and is a class that uses CRUD operations on an object in the project. an object can be one row in the database table (for instance a customer object attributes (columns)) or an object can be the result of a query.
+a DTO is a Data Transfer Object and it is a model or java object in the DAO (for instance in this project we used a Customer Object as our DTO).
+when we create a DTO ( new customer object) we add it to the databasse via the DAO (CustomerDAO)
 
 
 # Test
