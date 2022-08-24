@@ -12,9 +12,9 @@ Technologies used are JDBC to manipulate data in database using CRUD operations 
 ## Design Patterns
 Discuss DAO and Repository design patterns (150-200 words)
 
-DAO is a Data Access Object and is a class that uses CRUD operations on an object in the project. an object can be one row in the database table (for instance a customer object attributes (columns)) or an object can be the result of a query. a DTO is a Data Transfer Object and it is a model or java object in the DAO (for instance in this project we used a Customer Object as our DTO). when we create a DTO ( new customer object) we add it to the database via the DAO (CustomerDAO). Similarly, if we want to delete a DTO we delete it via DAO. Overall DAO hides low-level implementation and keeps business and database logic separate giving greater flexibility.
+DAO is a Data Access Object and is a class that uses CRUD operations on an object in the project. an object can be one row in the database table (for instance a customer object attributes (columns)) or an object can be the result of a query. a DTO is a Data Transfer Object and it is a model or java object in the DAO (for instance, in this project we used a Customer Object as our DTO). When we create a DTO ( new customer Object) we add it to the database via the DAO (CustomerDAO). Similarly, if we want to delete a DTO we delete it via DAO. Overall, DAO hides low-level implementation and keeps business and database logic separate giving greater flexibility.
 
-the Repository pattern focuses only on single table access per class. Instead of doing joinings in the database, you join it in code while in DAO you would do it with SQL using keys for joins. Repositories also facilitate distributing and sharding database (scaling out) versus (DAO) which is better for scaling vertically.
+The Repository pattern focuses only on single table access per class. Instead of doing joinings in the database, you join it in code meanwhile in DAO, you would do it with SQL using keys for joins. Repositories also facilitate distributing and sharding database (scaling out) versus (DAO) which is better for scaling vertically.
 
 
 # Test
