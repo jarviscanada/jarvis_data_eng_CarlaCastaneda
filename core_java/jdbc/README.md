@@ -21,11 +21,13 @@ when we create a DTO ( new customer object) we add it to the databasse via the D
 How you test your app against the database? (e.g. database setup, test data set up, query result)
 
 Database setup:
+
 `psql -h localhost -U postgres -f database.sql`
 `psql -h localhost -U postgres -d hplussport`
 `psql -h localhost -U postgres -d hplussport -f product.sql`
 `psql -h localhost -U postgres -d hplussport -f salesperson.sql`
  `psql -h localhost -U postgres -d hplussport -f orders.sql`
+ 
 SQL files are from exercise files of Lynda course
 
 Since we used Lynda course on JDBC to follow along the implementaion of this project, I followed along with the testing implementation, which consisted of testing being done on JDBCExecutor class. a connection was opened using the DatabaseConnectionManager in the JDBCExecutor class. if the connection is successful our CustomerDAO object is initiated. from there I tested the CustomerDAO class by created new Customer objects and setting their attributes with setter methods and printing the resulting object to see what ID it had been assigned based on id auto-incrementing primary key.
