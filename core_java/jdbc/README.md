@@ -32,6 +32,12 @@ SQL files are from exercise files of Lynda course
 
 Since we used Lynda course on JDBC to follow along the implementaion of this project, I followed along with the testing implementation, which consisted of testing being done on JDBCExecutor class. a connection was opened using the DatabaseConnectionManager in the JDBCExecutor class. if the connection is successful our CustomerDAO object is initiated. from there I tested the CustomerDAO class by created new Customer objects and setting their attributes with setter methods and printing the resulting object to see what ID it had been assigned based on id auto-incrementing primary key.
 
+with that ID I would use the query n the psql REPL (client program) in command line:
+`SELECT * FROM customer where customer_id= 1000`
+
+if an object was deleted I would check that customer no longer existed with the same query above.
+
+
 
 
 
