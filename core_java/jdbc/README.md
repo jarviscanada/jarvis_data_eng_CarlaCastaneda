@@ -16,6 +16,8 @@ DAO is a Data Access Object and is a class that uses CRUD operations on an objec
 a DTO is a Data Transfer Object and it is a model or java object in the DAO (for instance in this project we used a Customer Object as our DTO).
 when we create a DTO ( new customer object) we add it to the databasse via the DAO (CustomerDAO). Similarly if we want to delete a DTO we delete it via DAO. Overll DAO hides low- level implementation and keeps business and database logic seperate giving greater flexibility.
 
+the Repository pattern focuses only of single table access per class. Instead of doing joinings in the database you join it in code while in DAO you would do it with SQL using keys for joins. Repositiories also have better ability for distributing and sharding database
+
 
 # Test
 How you test your app against the database? (e.g. database setup, test data set up, query result)
