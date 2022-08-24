@@ -17,3 +17,4 @@ Discuss DAO and Repository design patterns (150-200 words)
 # Test
 How you test your app against the database? (e.g. database setup, test data set up, query result)
 
+Since we used Lynda course on JDBC to follow along the implementaion of this project, I followed along with the testing implementation, which consisted of testing being done on JDBCExecutor class. a connection was opened using the DatabaseConnectionManager.
