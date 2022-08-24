@@ -5,7 +5,7 @@ What does this app do? What technoglies your have used?
 CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker psql instance. also contains a database connection Manager class to connect to JDBC URL whcih contains the database and host and username and password.
 Technologies used are JDBC to manipulate data in database using CRUD operations and Customer objects, PSQL to acess database, MVN, Docker, intelliji and git/ github.
 
-# Implementaiton
+# Implementation
 ## ER Diagram
 ![my image](../assets/ER-diagram.JPG)
 
