@@ -6,7 +6,7 @@ This app
 
 # Implementaiton
 ## ER Diagram
-![my image](./assets/my_image.jpg)
+![my image](./assets/ER-diagram.png)
 
 ## Design Patterns
 Discuss DAO and Repository design patterns (150-200 words)
