@@ -34,9 +34,12 @@ Since we used Lynda course on JDBC to follow along the implementaion of this pro
 
 with that ID I would use the query n the psql REPL (client program) in command line:
 
+EX.
 `SELECT * FROM customer where customer_id= 1000`
 
+And compared it against the DTO in the JDBCExecutor class.
 if an object was deleted I would check that customer no longer existed with the same query above.
+Similarly, if an object was updated I would check that that the customers attributes fields that were changed VIA the customerDAO are the same as the ones changed on the Customer DTO.
 
 
 
