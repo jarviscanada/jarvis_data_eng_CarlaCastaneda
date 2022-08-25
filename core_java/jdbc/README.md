@@ -22,9 +22,13 @@ How you test your app against the database? (e.g. database setup, test data set 
 Database setup:
 
 `psql -h localhost -U postgres -f database.sql`
+
 `psql -h localhost -U postgres -d hplussport`
+
 `psql -h localhost -U postgres -d hplussport -f product.sql`
+
 `psql -h localhost -U postgres -d hplussport -f salesperson.sql`
+
  `psql -h localhost -U postgres -d hplussport -f orders.sql`
  
 SQL files are from exercise files of Lynda course
