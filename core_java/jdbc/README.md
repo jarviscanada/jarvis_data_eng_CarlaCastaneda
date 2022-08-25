@@ -2,8 +2,7 @@
 (50-100 words)
 What does this app do? What technoglies your have used?
 
-CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker psql instance. also contains a database connection Manager class to connect to JDBC URL whcih contains the database and host and username and password.
-Technologies used are JDBC to manipulate data in database using CRUD operations and Customer objects, PSQL to acess database, MVN, Docker, intelliji and git/ github.
+CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker psql instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in database using CRUD operations and Customer objects, PSQL to acess database, MVN, Docker, intelliji and git/ github.
 
 # Implementation
 ## ER Diagram
@@ -30,14 +29,14 @@ Database setup:
  
 SQL files are from exercise files of Lynda course
 
-Since we used Lynda course on JDBC to follow along the implementaion of this project, I followed along with the testing implementation, which consisted of testing being done on JDBCExecutor class. a connection was opened using the DatabaseConnectionManager in the JDBCExecutor class. if the connection is successful our CustomerDAO object is initiated. from there I tested the CustomerDAO class by created new Customer objects and setting their attributes with setter methods and printing the resulting object to see what ID it had been assigned based on id auto-incrementing primary key.
+Since we used Lynda course on JDBC to follow along with the implementation of this project, I followed along with the testing implementation, which consisted of testing being done on JDBCExecutor class. a connection was opened using the DatabaseConnectionManager object in the JDBCExecutor class. if the connection is successful our CustomerDAO object is initiated. from there I tested the CustomerDAO class by creating new Customer objects and setting their attributes with setter methods and printing the resulting object to see what ID it had been assigned based on id auto-incrementing primary key.
 
-with that ID I would use the query in the psql REPL (client program) in command line:
+with that ID I would use the query in the psql REPL (client program) in the command line:
 
 EX.
 `SELECT * FROM customer where customer_id= 1000`
 
 And compared it against the DTO in the JDBCExecutor class.
 if an object was deleted I would check that customer no longer existed with the same query above.
-Similarly, if an object was updated I would check that that the customers attributes fields that were changed VIA the customerDAO are the same as the ones changed on the Customer DTO.
+Similarly, if an object was updated I would check that the customers attribute fields that were changed VIA the customerDAO are the same as the ones changed on the Customer DTO.
 
