@@ -39,16 +39,15 @@ jarvis_projects:
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: 
-        - "Created a Monitoring Agent program using Bash scripts which collect hardward specs and memory usage data from
-          "
-        - "Using PSQLSQL,Docker, Linux/Bash,git,shell scripts"
+        - "Created a Monitoring Agent program using Bash scripts which collect hardward specs and memory usage data from nodes in linux cluster"
+        - "Using PSQL, Docker, Linux/Bash, git/github, shell scripts"
 
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
       - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker psql instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in database using CRUD operations and Customer objects, PSQL to acess database, MVN, Docker, intelliji and git/ github."
+      - "Grep App: Developed a Grep (regex) style application in Java which is able to parse through a directory of Files, similar to the grep linux command which returns matching strings from files.Able to recursively check a root directory and all its child directories for files which contain the regex pattern specified by user in command line arguments and write the matching lines to a file also specified by user.I have used a number of libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, Regex API.The IDE used is Intelliji and docker was used for deployment. "
   - name: "Springboot App"
     git_url: "/springboot"
     description: ""
@@ -101,7 +100,7 @@ education:
     department: "Computer Science"
     # optional
     awards_achievements: 
-      - "Entrace Scholarship- Faculty of Science"
+      - "Entrance Scholarship- Faculty of Science"
       - "Dean's List (2017, 2018): Faculty of Science"
       - "Dean's List (2020, 2021): Faculty of Science"
       - "GPA: 10.56/12"
