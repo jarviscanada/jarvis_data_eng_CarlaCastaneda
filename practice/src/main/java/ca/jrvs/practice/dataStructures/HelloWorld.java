@@ -1,4 +1,4 @@
-package ca.jrvs.practice.dataStructure;
+package ca.jrvs.practice.dataStructures;
 
 class HelloWorld {
 
