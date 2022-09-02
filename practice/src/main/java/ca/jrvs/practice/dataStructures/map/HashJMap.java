@@ -1,13 +1,14 @@
 package ca.jrvs.practice.dataStructures.map;
 
 
+import java.util.AbstractMap;
+import java.util.AbstractMap.SimpleEntry;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Set;
 
 public class HashJMap<K, V> implements JMap<K, V> {
-
   /**
    * The default initial capacity - MUST be a power of two.
    */
@@ -96,20 +97,46 @@ public class HashJMap<K, V> implements JMap<K, V> {
   @Override
   public V put(K key, V value) {
     //validate key == null
+    if (key==null){
+      return null;
+    }
 
     //init this.table
+    Node<K, V>[] table= (Node[]) (new Node[capacity()]);
 
     //using key.hashcode to compute the bucket location (this.table)
     //e.g. key.hashcode % (table.length -1)
+    int index= key.hashCode() % (table.length-1);
+
 
     //store KV in the table[index] (as Node<K,V>)
     //if key already exist (use #containsKey) update the value instead
     //if table[index] is taken, link the KV pair next to the exiting KV pair
+    Object p=this.table[index];
+    Node newNode=new Node(key.hashCode(),key,value,(Node)null);
 
+
+    if (containsKey(key)){
+      this.table[index].value = value;
+
+    }
+
+    if (p instanceof Node){
+      ((Node)p).next= newNode;
+    }
+    else if(this.table[index]==null){
+      p=newNode;
+
+    }
     //add KV pair to this.entrySet
+
+    Map.Entry<K, V> Entry= new SimpleEntry<>(key,value);
+    this.entrySet.add(Entry);
 
     //if this.size is greater than threshold, double table and re-hash
     //(iterate through this.entrySet for re-hashing )
+
+    
 
     return null;
   }
