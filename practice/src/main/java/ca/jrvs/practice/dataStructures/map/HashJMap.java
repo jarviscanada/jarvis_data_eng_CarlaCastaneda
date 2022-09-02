@@ -136,7 +136,10 @@ public class HashJMap<K, V> implements JMap<K, V> {
     //if this.size is greater than threshold, double table and re-hash
     //(iterate through this.entrySet for re-hashing )
 
-    
+    if (this.size> this.threshold){
+      this.size= this.size*2;
+
+    }
 
     return null;
   }
