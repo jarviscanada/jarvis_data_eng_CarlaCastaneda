@@ -3,6 +3,7 @@ package ca.jrvs.apps.twitter.dao.helper;
 import com.google.gdata.util.common.base.PercentEscaper;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.exception.OAuthException;
@@ -97,24 +98,21 @@ public class TwitterHttpHelper implements HttpHelper {
     return null;
   }
 
-  public static void main(String[] args)  {
-//
-//    String consumerKey= System.getenv("consumerKey");
-//    String consumerSecret= System.getenv("consumerSecret");
-//    String accessToken = System.getenv("accessToken");
-//    String tokenSecret = System.getenv("tokenSecret");
-//
-//    System.out.println("hi");
-//
-//    TwitterHttpHelper twitterHelper= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
-//    try{
-//    URI uri= new URI("https://api.twitter.com/1.1/statuses/update.json?status=");
+  public static void main(String[] args) throws Exception {
+
+    String consumerKey= System.getenv("consumerKey");
+    String consumerSecret= System.getenv("consumerSecret");
+    String accessToken = System.getenv("accessToken");
+    String tokenSecret = System.getenv("tokenSecret");
+
+
+    HttpHelper httpHelper= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
+
+
+     new URI("https://api.twitter.com/1.1/statuses/update.json?status=");
 //    twitterHelper.httpPost(uri);
-//
-//    }
-//    catch (URISyntaxException e){
-//
-//    }
+
+  System.out.println("mfkjdsnfkjdsnfjkns");
     logger.info("this executes");
 
 
