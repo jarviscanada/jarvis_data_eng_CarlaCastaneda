@@ -10,9 +10,16 @@ public class OddEven {
     return i%2==0 ? "even":"odd";
 
   }
+
+  /**
+   * since an odd number ends in 1 in binary
+   * @param i
+   * @return
+   */
   public String oddEvenBit(int i){
 
-    return null;
+
+    return (i & 1)!=1 ? "even":"odd";
   }
 
 }
