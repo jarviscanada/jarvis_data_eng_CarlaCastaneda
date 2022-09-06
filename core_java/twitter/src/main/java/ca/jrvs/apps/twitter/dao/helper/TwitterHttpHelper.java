@@ -54,8 +54,7 @@ public class TwitterHttpHelper implements HttpHelper {
   public HttpResponse httpPost(URI uri) {
     PercentEscaper percentEscaper = new PercentEscaper("", false);
     HttpPost request = new HttpPost(
-        uri + percentEscaper.escape(
-            (String) null));
+        uri );
 
     //sign the request(add headers)
     try {
@@ -109,11 +108,10 @@ public class TwitterHttpHelper implements HttpHelper {
     HttpHelper httpHelper= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
 
 
-     new URI("https://api.twitter.com/1.1/statuses/update.json?status=");
-//    twitterHelper.httpPost(uri);
+//     new URI("https://api.twitter.com/1.1/statuses/update.json?status=");
+    httpHelper.httpPost(new URI("https://api.twitter.com/1.1/statuses/update.json?status=como%20estas"));
 
-  System.out.println("mfkjdsnfkjdsnfjkns");
-    logger.info("this executes");
+    System.out.println("mfkjdsnfkjdsnfjkns");
 
 
   }
