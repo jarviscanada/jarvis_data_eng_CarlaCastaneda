@@ -10,10 +10,10 @@ public class Tweet {
   private Coordinates coordinates;
   private Entities entities;
   
-  private int retweetCount;
-  private int favoriteCount;
-  private boolean favorited;
-  private boolean retweeted;
+  private int retweetCount=0;
+  private int favoriteCount=0;
+  private boolean favorited=false;
+  private boolean retweeted=false;
 
   public int getId() {
     return id;

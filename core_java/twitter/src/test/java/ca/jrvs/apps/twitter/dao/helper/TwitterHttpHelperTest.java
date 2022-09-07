@@ -17,7 +17,7 @@ public class TwitterHttpHelperTest extends TestCase {
     String accessToken = System.getenv("accessToken");
     String tokenSecret = System.getenv("tokenSecret");
 
-     httpHelper = new TwitterHttpHelper(consumerKey, consumerSecret, accessToken,
+    httpHelper = new TwitterHttpHelper(consumerKey, consumerSecret, accessToken,
         tokenSecret);
 
   }
