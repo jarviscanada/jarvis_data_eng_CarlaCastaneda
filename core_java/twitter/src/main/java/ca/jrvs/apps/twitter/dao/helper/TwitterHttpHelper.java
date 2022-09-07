@@ -1,9 +1,7 @@
 package ca.jrvs.apps.twitter.dao.helper;
 
-import com.google.gdata.util.common.base.PercentEscaper;
 import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.exception.OAuthException;
@@ -15,6 +13,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpMethod;
 
 public class TwitterHttpHelper implements HttpHelper {
 
@@ -52,69 +51,68 @@ public class TwitterHttpHelper implements HttpHelper {
    */
   @Override
   public HttpResponse httpPost(URI uri) {
-    PercentEscaper percentEscaper = new PercentEscaper("", false);
-    HttpPost request = new HttpPost(
-        uri );
-
-    //sign the request(add headers)
-    try {
-      consumer.sign(request);
-    } catch (Exception e) {
-      logger.error("Authentication failed", e);
+    HttpResponse response = fetchResponse(uri, HttpMethod.POST);
+    try{
+    EntityUtils.consume(response.getEntity());}
+    catch (IOException e){
+      logger.error("could not close connection");
     }
-    //send the request
 
-//    httpClient = HttpClientBuilder.create().build();
+    return  response;
+  }
 
-    HttpResponse response;
-    try {
-      response = httpClient.execute(request);
-      System.out.println(EntityUtils.toString(response.getEntity()));
-      System.out.println("exeuted");
+  private HttpResponse fetchResponse(URI uri, HttpMethod method) {
+
+    if (method == HttpMethod.GET) {
+
+      HttpGet request = new HttpGet(uri);
+
+      try {
+        consumer.sign(request);
+        HttpResponse response = httpClient.execute(request);
       return response;
 
 
-    } catch (IOException e) {
-      logger.error("could not send request", e);
+      } catch (OAuthException | IOException e) {
+        logger.error("Authentication error", e.getMessage());
+      }
 
+
+    } else if (method == HttpMethod.POST) {
+      HttpPost request = new HttpPost(uri);
+
+      try {
+        consumer.sign(request);
+
+        return httpClient.execute(request);
+
+
+      } catch (OAuthException | IOException e) {
+        logger.error("Authentication error", e.getMessage());
+      }
+
+    } else {
+      logger.error("can only handle get and post requests");
     }
-
     return null;
+
+
   }
 
   @Override
   public HttpResponse httpGet(URI uri) {
-    HttpGet request = new HttpGet(uri);
-    try {
-      consumer.sign(request);
-      HttpResponse response = httpClient.execute(request);
+    HttpResponse response = fetchResponse(uri, HttpMethod.GET);
 
-
-    } catch (OAuthException | IOException e) {
-      throw new RuntimeException(e);
+    try{
+      EntityUtils.consume(response.getEntity());
+    }catch (IOException e){
+      logger.error("could not close connection");
     }
-
-    return null;
-  }
-
-  public static void main(String[] args) throws Exception {
-
-    String consumerKey= System.getenv("consumerKey");
-    String consumerSecret= System.getenv("consumerSecret");
-    String accessToken = System.getenv("accessToken");
-    String tokenSecret = System.getenv("tokenSecret");
-
-
-    HttpHelper httpHelper= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
-
-
-//     new URI("https://api.twitter.com/1.1/statuses/update.json?status=");
-    httpHelper.httpPost(new URI("https://api.twitter.com/1.1/statuses/update.json?status=como%20estas"));
-
-    System.out.println("mfkjdsnfkjdsnfjkns");
-
+    return response;
 
   }
+
+
 
 
 }
