@@ -1,7 +1,8 @@
 package ca.jrvs.apps.twitter.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import java.util.List;
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Entities {
   private List<Hashtag>hashTag;
   private List<UserMention> userMention;
