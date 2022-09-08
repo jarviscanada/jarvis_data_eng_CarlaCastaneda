@@ -5,6 +5,12 @@ package ca.jrvs.practice.codingChallenge;
  */
 public class OddEven {
 
+  /**
+   * BIG-O: O(1)
+   * Justification: it is an arithmetic operation
+   * @param i int number input
+   * @return even or odd
+   */
 
   public String oddEvenMod(int i){
     return i%2==0 ? "even":"odd";
@@ -12,9 +18,12 @@ public class OddEven {
   }
 
   /**
-   * since an odd number ends in 1 in binary
-   * @param i
-   * @return
+   * BIG-O: O(1)
+   * Justification: it is a boolean operation
+   *
+   * since an odd number ends in 1 in binary, using and operation will result in 1 number is  odd or 0 if the number is even
+   * @param i int number input
+   * @return even or odd
    */
   public String oddEvenBit(int i){
 
