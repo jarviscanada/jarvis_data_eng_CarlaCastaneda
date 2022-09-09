@@ -1,10 +1,16 @@
 package ca.jrvs.apps.twitter.model;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import java.math.BigInteger;
 import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonAutoDetect(fieldVisibility = Visibility.ANY)
 @JsonPropertyOrder({
     "created_at",
     "id",
@@ -25,9 +31,9 @@ public class Tweet {
   @JsonProperty("id_str")
   private String idStr;
   @JsonProperty("id")
-  private int id;
+  private Long id;
   @JsonProperty("coordinates")
-  private Coordinates coordinates;
+  private Coordinates coordinates=null;
   @JsonProperty("entities")
   private Entities entities;
   @JsonProperty("retweet_count")
@@ -39,7 +45,7 @@ public class Tweet {
   @JsonProperty("retweeted")
   private boolean retweeted=false;
   @JsonProperty("id")
-  public int getId() {
+  public Long getId() {
     return id;
   }
 
@@ -94,7 +100,7 @@ public class Tweet {
     this.retweeted = retweeted;
   }
   @JsonProperty("id")
-  public void setId(int id) {
+  public void setId(Long id) {
     this.id = id;
   }
   @JsonProperty("text")

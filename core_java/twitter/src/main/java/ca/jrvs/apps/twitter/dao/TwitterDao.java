@@ -9,6 +9,7 @@ import ca.jrvs.apps.twitter.model.Tweet;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gdata.util.common.base.PercentEscaper;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.net.URI;
 
 import java.net.URISyntaxException;
@@ -91,7 +92,8 @@ public class TwitterDao implements CrdDao<Tweet,String> {
 
     String json;
     try {
-      json = toJson(response, true, false);
+//      json = toJson(response, true, false);
+      json = EntityUtils.toString(response.getEntity());
     }catch (IOException e){
       e.printStackTrace();
       throw new RuntimeException("unable to convert entity to string ",e);
@@ -125,7 +127,7 @@ public class TwitterDao implements CrdDao<Tweet,String> {
       params=1;
 
     }
-    if (entity.getId()!=0){
+    if ((entity.getId())!=0){
       if (params!=0){
         request.append(AMPERSAND);
       }
@@ -231,7 +233,7 @@ public class TwitterDao implements CrdDao<Tweet,String> {
     return responseToTweet(HTTP_OK,response);
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws JsonProcessingException {
     String consumerKey = System.getenv("consumerKey");
     String consumerSecret = System.getenv("consumerSecret");
     String accessToken = System.getenv("accessToken");
@@ -240,6 +242,6 @@ public class TwitterDao implements CrdDao<Tweet,String> {
 
     CrdDao<Tweet,String> twitterDao= new TwitterDao(httpHelper);
     Tweet t=twitterDao.findById("1567593424232103936");
-    System.out.println(t.getId());
+    System.out.println(toJson(t,true,false));
   }
 }

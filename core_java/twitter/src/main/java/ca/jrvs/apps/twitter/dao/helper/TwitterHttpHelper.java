@@ -52,11 +52,6 @@ public class TwitterHttpHelper implements HttpHelper {
   @Override
   public HttpResponse httpPost(URI uri) {
     HttpResponse response = fetchResponse(uri, HttpMethod.POST);
-    try{
-    EntityUtils.consume(response.getEntity());}
-    catch (IOException e){
-      logger.error("could not close connection");
-    }
 
     return  response;
   }
@@ -102,12 +97,12 @@ public class TwitterHttpHelper implements HttpHelper {
   @Override
   public HttpResponse httpGet(URI uri) {
     HttpResponse response = fetchResponse(uri, HttpMethod.GET);
-
-    try{
-      EntityUtils.consume(response.getEntity());
-    }catch (IOException e){
-      logger.error("could not close connection");
-    }
+//
+//    try{
+//      EntityUtils.consume(response.getEntity());
+//    }catch (IOException e){
+//      logger.error("could not close connection");
+//    }
     return response;
 
   }
