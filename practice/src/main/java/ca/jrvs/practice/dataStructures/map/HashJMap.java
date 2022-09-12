@@ -3,6 +3,9 @@ package ca.jrvs.practice.dataStructures.map;
 
 import java.util.AbstractMap;
 import java.util.AbstractMap.SimpleEntry;
+import java.util.AbstractSet;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Objects;
@@ -102,11 +105,13 @@ public class HashJMap<K, V> implements JMap<K, V> {
     }
 
     //init this.table
-    Node<K, V>[] table= (Node[]) (new Node[capacity()]);
+    this.table= (Node[]) (new Node[capacity()]);
 
     //using key.hashcode to compute the bucket location (this.table)
     //e.g. key.hashcode % (table.length -1)
     int index= key.hashCode() % (table.length-1);
+
+    this.entrySet= entrySet();
 
 
     //store KV in the table[index] (as Node<K,V>)
@@ -122,16 +127,21 @@ public class HashJMap<K, V> implements JMap<K, V> {
     }
 
     if (p instanceof Node){
+      this.size+=1;
+
       ((Node)p).next= newNode;
+      Map.Entry<K, V> Entry= new Node(key.hashCode(),key,value,(Node)null);
+      this.entrySet.add(Entry);
     }
     else if(this.table[index]==null){
+      this.size+=2;
       p=newNode;
+      Map.Entry<K, V> Entry= new Node(key.hashCode(),key,value,(Node)null);
+      this.entrySet.add(Entry);
 
     }
     //add KV pair to this.entrySet
 
-    Map.Entry<K, V> Entry= new SimpleEntry<>(key,value);
-    this.entrySet.add(Entry);
 
     //if this.size is greater than threshold, double table and re-hash
     //(iterate through this.entrySet for re-hashing )
@@ -139,12 +149,41 @@ public class HashJMap<K, V> implements JMap<K, V> {
     if (this.size> this.threshold){
       this.size= this.size*2;
 
+      this.table= (Node[]) (new Node[capacity()]);
+
+      for (Map.Entry<K,V> e:this.entrySet){
+        K k=e.getKey();
+        V v= e.getValue();
+
+        int bucket= k.hashCode() % (this.table.length-1);
+
+        Node node=new Node(k.hashCode(),k,v,(Node)null);
+
+
+        p=this.table[index];
+
+        if (p instanceof Node){
+          ((Node<?, ?>) p).next=node;
+
+        }
+
+        this.table[bucket]= node;
+
+
+      }
+
+
+
+
+
+
     }
 
     return null;
   }
 
   final int capacity() {
+
     return (table != null) ? table.length :
         (threshold > 0) ? threshold :
             DEFAULT_INITIAL_CAPACITY;
@@ -167,6 +206,9 @@ public class HashJMap<K, V> implements JMap<K, V> {
   @Override
   public boolean containsKey(Object key) {
     //validate key == null
+    if (key==null){
+      return false;
+    }
 
     //using key.hashcode to compute the bucket location (this.table)
     //e.g. key.hashcode % (table.length -1)
@@ -216,6 +258,20 @@ public class HashJMap<K, V> implements JMap<K, V> {
    */
   @Override
   public Set<Entry<K, V>> entrySet() {
+    Set e = null;
+    if ((this.entrySet)==null) return (this.entrySet=new AbstractSet<Entry<K, V>>() {
+      @Override
+      public Iterator<Entry<K, V>> iterator() {
+        return entrySet().iterator();
+      }
+
+      @Override
+      public int size() {
+        return HashJMap.this.size;
+      }
+    });
+
+
     return null;
   }
 
