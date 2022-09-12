@@ -4,7 +4,6 @@ import static ca.jrvs.apps.twitter.example.JsonParser.toJson;
 import static ca.jrvs.apps.twitter.example.JsonParser.toObjectFromJSON;
 
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
-import ca.jrvs.apps.twitter.dao.helper.TwitterHttpHelper;
 import ca.jrvs.apps.twitter.model.Tweet;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gdata.util.common.base.PercentEscaper;
@@ -47,13 +46,7 @@ public class TwitterDao implements CrdDao<Tweet,String> {
     return uri;
 
   }
-//  private URI getGetUri(String entity) throws URISyntaxException, JsonProcessingException {
-//    StringBuilder request = (new StringBuilder());
-//    request.append(API_BASE_URI+SHOW_PATH+QUERY_SYM+"id"+EQUAL+entity);
-//
-//    URI uri = new URI(request.toString());
-//    return uri;
-//  }
+
 
   @Override
   public Tweet create(Tweet entity)  {
@@ -65,7 +58,7 @@ public class TwitterDao implements CrdDao<Tweet,String> {
       e.printStackTrace();
 
     }
-    HttpResponse response=httpHelper.httpPost(uri);
+    HttpResponse response=this.httpHelper.httpPost(uri);
 
 
     return responseToTweet(HTTP_OK,response);
@@ -115,7 +108,8 @@ public class TwitterDao implements CrdDao<Tweet,String> {
 //    StringBuilder request= (new StringBuilder());
 
     int params=0;
-    PercentEscaper pe= new PercentEscaper(" :{}\"",false);
+
+    PercentEscaper pe= new PercentEscaper("",false);
 
 
 
@@ -127,7 +121,7 @@ public class TwitterDao implements CrdDao<Tweet,String> {
       params=1;
 
     }
-    if ((entity.getId())!=0){
+    if ((entity.getId())!=null){
       if (params!=0){
         request.append(AMPERSAND);
       }
@@ -205,7 +199,7 @@ public class TwitterDao implements CrdDao<Tweet,String> {
 
       URI uri = new URI(request.toString());
 
-      response= httpHelper.httpGet(uri);
+      response= this.httpHelper.httpGet(uri);
 
     }catch (Exception e){
       e.printStackTrace();
@@ -224,7 +218,7 @@ public class TwitterDao implements CrdDao<Tweet,String> {
 
       URI uri = new URI(request.toString());
 
-      response= httpHelper.httpGet(uri);
+      response= this.httpHelper.httpGet(uri);
 
     }catch (Exception e){
       e.printStackTrace();
@@ -233,15 +227,15 @@ public class TwitterDao implements CrdDao<Tweet,String> {
     return responseToTweet(HTTP_OK,response);
   }
 
-  public static void main(String[] args) throws JsonProcessingException {
-    String consumerKey = System.getenv("consumerKey");
-    String consumerSecret = System.getenv("consumerSecret");
-    String accessToken = System.getenv("accessToken");
-    String tokenSecret = System.getenv("tokenSecret");
-    HttpHelper httpHelper= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
-
-    CrdDao<Tweet,String> twitterDao= new TwitterDao(httpHelper);
-    Tweet t=twitterDao.findById("1567593424232103936");
-    System.out.println(toJson(t,true,false));
-  }
+//  public static void main(String[] args) throws JsonProcessingException {
+//    String consumerKey = System.getenv("consumerKey");
+//    String consumerSecret = System.getenv("consumerSecret");
+//    String accessToken = System.getenv("accessToken");
+//    String tokenSecret = System.getenv("tokenSecret");
+//    HttpHelper httpHelper= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
+//
+//    CrdDao<Tweet,String> twitterDao= new TwitterDao(httpHelper);
+//    Tweet t=twitterDao.findById("1567593424232103936");
+//    System.out.println(toJson(t,true,false));
+//  }
 }

@@ -59,13 +59,14 @@ public class TwitterHttpHelperTest {
   public void httpGet() throws URISyntaxException, IOException {
     HttpResponse response = httpHelper.httpGet(new URI("https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=CarlaCa01239209"));
     System.out.println(EntityUtils.toString(response.getEntity()));
-//    try{
-//      EntityUtils.consume(response.getEntity());}
-//    catch (IOException e){
-////      e.printStackTrace();
-//      logger.error("could not close connection");
-//    }
+
     assertEquals(200,response.getStatusLine().getStatusCode());
+    try{
+      EntityUtils.consume(response.getEntity());}
+    catch (IOException e){
+//      e.printStackTrace();
+      logger.error("could not close connection");
+    }
 
 
   }
