@@ -30,5 +30,6 @@ public class TwoSumTest {
     int target = 6;
 
     assertArrayEquals(new int[]{2,1}, ts.twoSumHashMap(nums, target));
+
   }
 }

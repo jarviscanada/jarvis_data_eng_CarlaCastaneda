@@ -4,6 +4,10 @@ import java.util.HashMap;
 
 public class TwoSum {
 
+  /**
+   * Big-O: O(n^2)
+   * Justification: nested for loop
+   */
   public int[] twoSum(int [] arrayInt,int target){
 
     int[] result= new int[2];
@@ -22,6 +26,11 @@ public class TwoSum {
     return result;
 
   }
+
+  /**
+   * Big-O: O(n)
+   * Justification: for loop O(n) with O(1) map operations such as containskey and put functions
+   */
 
   public int[] twoSumHashMap(int [] nums,int target){
     int [] result= new int[2];
@@ -54,11 +63,6 @@ public class TwoSum {
 
   }
 
-  public static void main(String[] args) {
-    TwoSum ts= new TwoSum();
-    int[] result=ts.twoSumHashMap(new int[]{3, 2, 4},6);
-    System.out.println(result[0]+""+result[1]);
-  }
 
 
 
