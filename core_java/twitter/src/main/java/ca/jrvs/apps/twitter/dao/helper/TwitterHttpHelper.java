@@ -75,16 +75,20 @@ public class TwitterHttpHelper implements HttpHelper {
 
     } else if (method == HttpMethod.POST) {
       HttpPost request = new HttpPost(uri);
+      HttpResponse response;
 
       try {
         consumer.sign(request);
 
-        return httpClient.execute(request);
+       response = httpClient.execute(request);
+       return response;
+
 
 
       } catch (OAuthException | IOException e) {
         logger.error("Authentication error", e.getMessage());
       }
+
 
     } else {
       logger.error("can only handle get and post requests");

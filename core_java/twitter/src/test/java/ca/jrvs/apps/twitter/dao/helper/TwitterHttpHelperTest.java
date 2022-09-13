@@ -45,14 +45,15 @@ public class TwitterHttpHelperTest {
     }
     HttpResponse response =httpHelper.httpPost(new URI("https://api.twitter.com/1.1/statuses/update.json?status="+sb));
     System.out.println(EntityUtils.toString(response.getEntity()));
-//    try{
-//      EntityUtils.consume(response.getEntity());}
-//    catch (IOException e){
-////      e.printStackTrace();
-//      logger.error("could not close connection");
-//    }
 
     assertEquals(200,response.getStatusLine().getStatusCode());
+        try{
+      EntityUtils.consume(response.getEntity());}
+    catch (IOException e){
+//      e.printStackTrace();
+      logger.error("could not close connection");
+    }
+
   }
 
   @Test
