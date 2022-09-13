@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Coordinates {
   private String type;
-  private List<Integer> coordinates;
+  private List<Double> coordinates;
 
   public String getType() {
     return type;
@@ -19,11 +19,11 @@ public class Coordinates {
     this.type = type;
   }
 
-  public List<Integer> getCoordinates() {
+  public List<Double> getCoordinates() {
     return coordinates;
   }
 
-  public void setCoordinates(List<Integer> coordinates) {
+  public void setCoordinates(List<Double> coordinates) {
     this.coordinates = coordinates;
   }
 }
