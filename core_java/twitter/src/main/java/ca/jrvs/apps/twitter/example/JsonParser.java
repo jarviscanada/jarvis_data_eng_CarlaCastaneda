@@ -1,7 +1,10 @@
 package ca.jrvs.apps.twitter.example;
 
 import ca.jrvs.apps.twitter.example.dto.Company;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -21,6 +24,8 @@ public class JsonParser {
   public static String toJson (Object object,boolean prettyJson,boolean includeNullValues)
       throws JsonProcessingException {
     ObjectMapper m=new ObjectMapper();
+    m.setVisibility(m.getVisibilityChecker()
+        .withFieldVisibility(JsonAutoDetect.Visibility.ANY));
     if (!includeNullValues){
       m.setSerializationInclusion(Include.NON_NULL);
     } if (prettyJson){
@@ -31,6 +36,8 @@ public class JsonParser {
 
   public static <T> T toObjectFromJSON (String json,Class clazz) throws IOException {
     ObjectMapper m = new ObjectMapper();
+    m.setVisibility(m.getVisibilityChecker()
+        .withFieldVisibility(JsonAutoDetect.Visibility.ANY));
 
      return (T) m.readValue(json,clazz);
   }
