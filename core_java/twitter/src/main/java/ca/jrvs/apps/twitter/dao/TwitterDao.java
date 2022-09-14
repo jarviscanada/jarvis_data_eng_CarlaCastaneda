@@ -60,7 +60,7 @@ public class TwitterDao implements CrdDao<Tweet, String> {
     return responseToTweet(HTTP_OK, response);
   }
 
-  private Tweet responseToTweet(Integer expectedCode, HttpResponse response) {
+  Tweet responseToTweet(Integer expectedCode, HttpResponse response) {
     Tweet tweet = null;
 
     int status = response.getStatusLine().getStatusCode();
