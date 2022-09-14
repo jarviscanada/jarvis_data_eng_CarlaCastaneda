@@ -1,7 +1,9 @@
 package ca.jrvs.practice.codingChallenge;
 
 public class Atoi {
-  public int stringToInt(String s){
+  int MIN_VALUE=(int) -(Math.pow(2,31));
+  int MAX_VALUE= (int)(Math.pow(2,31)-1);
+  public int myAtoi(String s) {
     StringBuilder result=new StringBuilder();
 
     for (int i=0; i<s.length();i++){
@@ -21,28 +23,30 @@ public class Atoi {
       }
 
     }
-    int response= Integer.valueOf(result.toString());
 
-    if (response<-(Math.pow(2,31))){
-      response= (int)-(Math.pow(2,31));
-      System.out.println((-2^(31)));
+    Long response= Long.parseLong(result.toString());
+    int final_response;
 
-    }
-    else if(response>(Math.pow(2,31))-1){
-      response=(int)(Math.pow(2,31))-1;
+    if (response<MIN_VALUE){
+      final_response= MIN_VALUE;
+      System.out.println(MIN_VALUE);
 
     }
-//    System.out.println(-(Math.pow(2,31)));
-//    System.out.println((Math.pow(2,31))-1);
+    else if(response> MAX_VALUE){
+      final_response=MAX_VALUE;
+      System.out.println(MAX_VALUE);
 
-    return response;
+
+    }
+    else{
+      final_response=Math.toIntExact(response);
+    }
+    return final_response;
   }
 
   public static void main(String[] args) {
-    Atoi atoi= new Atoi();
-
-    int result=atoi.stringToInt("-42");
-    System.out.println(result);
+    Atoi a= new Atoi();
+    System.out.println(a.myAtoi("-123456776665"));
   }
 
 
