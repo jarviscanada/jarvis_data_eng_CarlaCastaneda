@@ -1,12 +1,19 @@
 package ca.jrvs.apps.twitter.service;
 
+import static java.awt.SystemColor.text;
+
 import ca.jrvs.apps.twitter.dao.CrdDao;
 import ca.jrvs.apps.twitter.dao.TwitterDao;
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
 import ca.jrvs.apps.twitter.dao.helper.TwitterHttpHelper;
+import ca.jrvs.apps.twitter.example.JsonParser;
+import ca.jrvs.apps.twitter.model.Coordinates;
+import ca.jrvs.apps.twitter.model.Entities;
 import ca.jrvs.apps.twitter.model.Tweet;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -22,24 +29,31 @@ public class TwitterService implements Service{
     String s=tweet.getText();
     try {
       if (s.length() > 140) {
-        logger.error("Esceeded character limit");
+        logger.error("Exceeded character limit");
 
         throw new IOException("exceeded charracter limit");
 
 
       }
-      List<Double> coordinates= tweet.getCoordinates().getCoordinates();
+      Coordinates coordinates= tweet.getCoordinates();
+
+
       if (coordinates!=null){
-        Double lon= coordinates.get(0);
-        Double lat= coordinates.get(1);
+        List<Double> coordinatesList=coordinates.getCoordinates();
+        if (coordinatesList!=null){
+          Double lon= coordinatesList.get(0);
+          Double lat= coordinatesList.get(1);
 
-        boolean b = (lon > 180.0)
-            || (lon < -90.0 )|| (lat> 90.0) || (lat<-90.0);
+          boolean b = (lon > 180.0)
+              || (lon < -90.0 )|| (lat> 90.0) || (lat<-90.0);
 
-        if(b){
-          throw new IOException("latitude or longitude out of range");
+          if(b){
+            throw new IOException("latitude or longitude out of range");
+
+          }
 
         }
+
 
       }
 
@@ -53,32 +67,113 @@ public class TwitterService implements Service{
     return (Tweet) dao.create(tweet);
   }
 
+  private Boolean validateId(String id){
+    int id_length= id.length();
+    if (id==null){
+      return false;
+
+    }
+
+    if(id_length==0){
+      return false;
+
+    }
+    for (int i=0;i<id_length;i++){
+      if (id.charAt(i)<'0' || id.charAt(i)>'9'){
+        return false;
+
+      }
+
+
+    }
+
+  return true;
+  }
+
   @Override
   public Tweet showTweet(String id, String[] fields) {
+    Boolean result= validateId(id);
+    if (result== false){
+      throw new IllegalArgumentException("invalid id");
+
+    }
+    if (fields.length==0){
+      throw new IllegalArgumentException("in");
+    }
+    Tweet tweet= (Tweet) dao.findById(id);
+
+    List<String> possible_fields = new LinkedList<String>(Arrays.asList("created_at","id",
+        "id_str",
+        "text",
+        "entities",
+        "coordinates",
+        "retweet_count",
+        "favorite_count",
+        "favorited",
+        "retweeted"));
+
+
+    for ( String i:fields){
+
+      if ( possible_fields.contains(i)) {
+        possible_fields.remove(i);
+
+      }}
+
+    for (String j:possible_fields){
+      if (j.equals("created_at")){
+        tweet.setCreatedAt(null);
+
+      }
+      if (j.equals("id")){
+        tweet.setId(null);
+      }
+      if (j.equals("id_str")){
+        tweet.setIdStr(null);
+
+      }
+      if (j.equals("text")){
+        tweet.setText(null);
+
+      }
+      if(j.equals("entities")){
+        tweet.setEntities(null);
+      }
+      if (j.equals("coordinates")){
+        tweet.setCoordinates(null);
+      }
+
+
+    }
+
     return null;
+
   }
 
   @Override
   public List<Tweet> deleteTweets(String[] ids) {
-    return null;
+    List<Tweet> tweets= new ArrayList<>();
+
+    for( String id: ids){
+      Boolean result = validateId(id);
+      if (result== true){
+
+        try {
+
+          Tweet tweet = (Tweet) dao.deleteById(id);
+          tweets.add(tweet);
+        }  catch(Exception e){
+          throw new IllegalArgumentException("tweet id doesnt exist");
+        }
+      }
+
+
+
+    }
+
+
+    return tweets;
   }
 
-  public static void main(String[] args) {
-    String consumerKey= System.getenv("consumerKey");
-    String consumerSecret= System.getenv("consumerSecret");
-    String accessToken = System.getenv("accessToken");
-    String tokenSecret= System.getenv("tokenSecret");
 
-    HttpHelper hp= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
-
-    CrdDao crdDao= new TwitterDao(hp);
-    TwitterService ts= new TwitterService(crdDao);
-    Tweet tweet= new Tweet();
-    tweet.setText("fsfndsfsfnsdjfnkjsnfkjsnjkjkdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-        + "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-        + "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-        + "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-        + "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd");
-    ts.postTweet(tweet);
-  }
 }

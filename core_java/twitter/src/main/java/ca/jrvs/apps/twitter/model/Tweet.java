@@ -6,8 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import java.math.BigInteger;
-import java.util.List;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonAutoDetect(fieldVisibility = Visibility.ANY)
@@ -37,9 +36,9 @@ public class Tweet {
   @JsonProperty("entities")
   private Entities entities;
   @JsonProperty("retweet_count")
-  private int retweetCount=0;
+  private  int retweetCount;
   @JsonProperty("favorite_count")
-  private int favoriteCount=0;
+  private int favoriteCount;
   @JsonProperty("favorited")
   private boolean favorited=false;
   @JsonProperty("retweeted")
