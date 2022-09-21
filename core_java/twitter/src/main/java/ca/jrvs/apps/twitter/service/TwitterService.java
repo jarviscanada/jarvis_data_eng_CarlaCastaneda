@@ -97,7 +97,7 @@ public class TwitterService implements Service{
       throw new IllegalArgumentException("invalid id");
 
     }
-    if (fields.length==0){
+    if (fields!=null && fields.length==0){
       throw new IllegalArgumentException("in");
     }
     Tweet tweet= (Tweet) dao.findById(id);
@@ -112,41 +112,45 @@ public class TwitterService implements Service{
         "favorited",
         "retweeted"));
 
+    if (fields!=null){
+      for ( String i:fields){
 
-    for ( String i:fields){
+        if ( possible_fields.contains(i)) {
+          possible_fields.remove(i);
 
-      if ( possible_fields.contains(i)) {
-        possible_fields.remove(i);
+        }}
 
-      }}
+      for (String j:possible_fields){
+        if (j.equals("created_at")){
+          tweet.setCreatedAt(null);
 
-    for (String j:possible_fields){
-      if (j.equals("created_at")){
-        tweet.setCreatedAt(null);
+        }
+        if (j.equals("id")){
+          tweet.setId(null);
+        }
+        if (j.equals("id_str")){
+          tweet.setIdStr(null);
+
+        }
+        if (j.equals("text")){
+          tweet.setText(null);
+
+        }
+        if(j.equals("entities")){
+          tweet.setEntities(null);
+        }
+        if (j.equals("coordinates")){
+          tweet.setCoordinates(null);
+        }
+
 
       }
-      if (j.equals("id")){
-        tweet.setId(null);
-      }
-      if (j.equals("id_str")){
-        tweet.setIdStr(null);
-
-      }
-      if (j.equals("text")){
-        tweet.setText(null);
-
-      }
-      if(j.equals("entities")){
-        tweet.setEntities(null);
-      }
-      if (j.equals("coordinates")){
-        tweet.setCoordinates(null);
-      }
-
 
     }
 
-    return null;
+
+
+    return tweet;
 
   }
 
