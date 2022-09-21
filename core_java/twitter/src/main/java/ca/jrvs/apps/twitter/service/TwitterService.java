@@ -125,21 +125,21 @@ public class TwitterService implements Service{
           tweet.setCreatedAt(null);
 
         }
-        if (j.equals("id")){
+        else if (j.equals("id")){
           tweet.setId(null);
         }
-        if (j.equals("id_str")){
+        else if (j.equals("id_str")){
           tweet.setIdStr(null);
 
         }
-        if (j.equals("text")){
+        else if (j.equals("text")){
           tweet.setText(null);
 
         }
-        if(j.equals("entities")){
+        else if(j.equals("entities")){
           tweet.setEntities(null);
         }
-        if (j.equals("coordinates")){
+        else if (j.equals("coordinates")){
           tweet.setCoordinates(null);
         }
 
@@ -147,9 +147,6 @@ public class TwitterService implements Service{
       }
 
     }
-
-
-
     return tweet;
 
   }
