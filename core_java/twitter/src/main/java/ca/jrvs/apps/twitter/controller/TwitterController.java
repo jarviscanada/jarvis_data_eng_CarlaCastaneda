@@ -32,6 +32,8 @@ public class TwitterController implements Controller{
 
       coordinates.setCoordinates(
           Arrays.asList(Double.valueOf(coords2[0]), Double.valueOf(coords2[1])));
+      tweet.setCoordinates(coordinates);
+
       newTweet = service.postTweet(tweet);
     }
     return newTweet;

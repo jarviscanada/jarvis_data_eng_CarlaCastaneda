@@ -32,7 +32,7 @@ public class Tweet {
   @JsonProperty("id")
   private Long id;
   @JsonProperty("coordinates")
-  private Coordinates coordinates=null;
+  private Coordinates coordinates;
   @JsonProperty("entities")
   private Entities entities;
   @JsonProperty("retweet_count")

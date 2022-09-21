@@ -10,11 +10,12 @@ import java.util.List;
 @JsonAutoDetect(fieldVisibility = Visibility.ANY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Coordinates {
+  @JsonProperty("coordinates")
+  private List<Double> coordinates;
+
   @JsonProperty("type")
 
   private String type;
-  @JsonProperty("coordinates")
-  private List<Double> coordinates;
 
   public String getType() {
     return type;

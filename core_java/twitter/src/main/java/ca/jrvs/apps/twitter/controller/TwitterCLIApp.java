@@ -36,13 +36,15 @@ public class TwitterCLIApp {
     if (args.length==0){
       throw new IllegalArgumentException(USAGE);
 
-    }else if (args[0].toLowerCase().equals("post")){
+    }else if (args[0].equalsIgnoreCase("post")){
       Tweet tweet =controller.postTweet(args);
       printTweet(tweet);
+      System.out.println();
 
     }else if (args[0].toLowerCase()=="show"){
       Tweet tweet = controller.showTweet(args);
       printTweet(tweet);
+      System.out.println("coordinates"+tweet.getCoordinates());
 
     }else if (args[0].toLowerCase()=="delete"){
       List<Tweet> tweets=  controller.deleteTweet(args);
@@ -53,18 +55,21 @@ public class TwitterCLIApp {
 
     }
 
+
+
   }
-  private String printTweet (Tweet tweet){
+  private  void printTweet (Tweet tweet){
     String s = null;
 
     try{
       s = JsonParser.toJson(tweet,true,false);
+      System.out.println(s);
     } catch(JsonProcessingException e){
       e.printStackTrace();
 
 
     }
-    return s;
+
 
   }
 
