@@ -35,7 +35,7 @@ public class TwitterControllerIntTest {
 
   @Test
   public void postTweet() {
-    String [] args = new String[] {"post","ROSALIA","1:-1"};
+    String [] args = new String[] {"post","ROSAyaliyaliyaliyalibhjbhjbj","1:-1"};
     Tweet tweet=controller.postTweet(args);
     try {
       String json = JsonParser.toJson(tweet, true, true);
