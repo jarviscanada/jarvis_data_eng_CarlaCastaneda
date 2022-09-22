@@ -13,6 +13,7 @@ import java.net.URISyntaxException;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+@org.springframework.stereotype.Repository
 
 public class TwitterDao implements CrdDao<Tweet, String> {
 

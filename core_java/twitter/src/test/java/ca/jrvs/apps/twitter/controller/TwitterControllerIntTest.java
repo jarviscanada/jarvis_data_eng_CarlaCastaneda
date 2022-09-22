@@ -35,7 +35,7 @@ public class TwitterControllerIntTest {
 
   @Test
   public void postTweet() {
-    String [] args = new String[] {"post","ROSAyaliyaliyaliyalibhjbhjbj","1:-1"};
+    String [] args = new String[] {"post","Nicki Minaj has Tourettes","1:-1"};
     Tweet tweet=controller.postTweet(args);
     try {
       String json = JsonParser.toJson(tweet, true, true);
@@ -55,6 +55,7 @@ public class TwitterControllerIntTest {
     try {
       String json = JsonParser.toJson(tweet, true, true);
       System.out.println("json string"+json);
+
     }catch (JsonProcessingException e){
       e.printStackTrace();
 
