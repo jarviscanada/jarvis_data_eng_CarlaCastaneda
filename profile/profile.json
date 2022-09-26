@@ -38,37 +38,12 @@
     },
     {
       "description": [
-        "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam.",
+        "Twitter App:",
         "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker psql instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in database using CRUD operations and Customer objects, PSQL to acess database, MVN, Docker, intelliji and git/ github.",
         "Grep App: Developed a Grep (regex) style application in Java which is able to parse through a directory of Files, similar to the grep linux command which returns matching strings from files.Able to recursively check a root directory and all its child directories for files which contain the regex pattern specified by user in command line arguments and write the matching lines to a file also specified by user.I have used a number of libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, Regex API.The IDE used is Intelliji and docker was used for deployment. "
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
-    },
-    {
-      "description": "",
-      "git_url": "/springboot",
-      "name": "Springboot App"
-    },
-    {
-      "description": "",
-      "git_url": "/python_data_anlytics",
-      "name": "Python Data Analytics"
-    },
-    {
-      "description": "",
-      "git_url": "/hadoop",
-      "name": "Hadoop"
-    },
-    {
-      "description": "",
-      "git_url": "/spark",
-      "name": "Spark"
-    },
-    {
-      "description": "",
-      "git_url": "/cloud_devops",
-      "name": "Cloud/DevOps"
     }
   ],
   "name": "Carla Castaneda",
@@ -76,16 +51,13 @@
     {
       "bullets": [
         "Video Editing",
-        "Advertising and Marketing",
-        "Social Media Marketing",
-        "Jupyter Notebooks",
-        "Eclipse IDE"
+        "Digital Advertising and Marketing"
       ],
       "title": "Other Skills"
     },
     {
       "bullets": [
-        "Dance",
+        "Flamenco",
         "Painting",
         "Volunteering",
         "Outdoor Activities"
