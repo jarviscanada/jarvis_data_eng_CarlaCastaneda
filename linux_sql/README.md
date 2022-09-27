@@ -29,7 +29,7 @@ host_info and host_usage which would store information about hardware specs and 
 created shell scripts host_info.sh and host_usage.sh to collect this information via bash commands
 stored in variables and inserted into the database tables respectively. host_usage.sh should execute evertime
 server is up and running every minute and inserting into database table host_usage which was implemented using crontab in Linux. we also have a ddl.sql file which createdthe database tables if not created already and a psql_docker.sh shell script which creates, stops or starts an instance of the psql docker container. The SQL scripts used to gather data from the database contain average memory uses over 5 minute intervals of each host as well as check if any servers are not healthy over 5 min intervals.
-Used git and github to keep track of feature branches and devlopment changes throughout the project.
+Used git and github to keep track of feature branches and development changes throughout the project.
 
 ## Architecture
 Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io website). Image must be saved to the `assets` directory.
