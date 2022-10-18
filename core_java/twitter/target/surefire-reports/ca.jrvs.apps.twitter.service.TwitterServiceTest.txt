@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: ca.jrvs.apps.twitter.service.TwitterServiceTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! - in ca.jrvs.apps.twitter.service.TwitterServiceTest
+testPostTweet(ca.jrvs.apps.twitter.service.TwitterServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at ca.jrvs.apps.twitter.service.TwitterServiceTest.testPostTweet(TwitterServiceTest.java:46)
+
+testShowTweet(ca.jrvs.apps.twitter.service.TwitterServiceTest)  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.NullPointerException
+	at ca.jrvs.apps.twitter.service.TwitterServiceTest.testShowTweet(TwitterServiceTest.java:56)
+
+testDeleteTweets(ca.jrvs.apps.twitter.service.TwitterServiceTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalArgumentException: tweet id doesnt exist
+	at ca.jrvs.apps.twitter.service.TwitterServiceTest.testDeleteTweets(TwitterServiceTest.java:74)
+

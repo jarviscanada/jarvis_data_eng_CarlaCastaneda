@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ca.jrvs.apps.twitter.controller.TwitterControllerIntTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.859 s <<< FAILURE! - in ca.jrvs.apps.twitter.controller.TwitterControllerIntTest
+postTweet(ca.jrvs.apps.twitter.controller.TwitterControllerIntTest)  Time elapsed: 0.127 s  <<< ERROR!
+java.lang.NullPointerException
+	at ca.jrvs.apps.twitter.controller.TwitterControllerIntTest.postTweet(TwitterControllerIntTest.java:39)
+

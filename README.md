@@ -1,12 +1,12 @@
 # Carla Castaneda . Jarvis Consulting
 
-I am a recent Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. At my current role at Jarvis Consulting I have been able to strengthen my problem solving skills and my knowledge of object oriented programming and APIs, and as well, be able to pick up on so many new technical skills such as bash scripting and Agile development.I am most excited about how artificial Intelligence will progress and help better the lives of people  by providing solutions for many global and local issues.
+I am a recent Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. As a result, I am most excited about how artificial Intelligence will progress and help better the lives of people  by providing solutions for many global and local issues.I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. At my current role at Jarvis Consulting I have been able to strengthen my problem solving skills and my knowledge of object oriented programming and APIs, and as well, be able to pick up on so many new technical skills such as bash scripting and Agile development.
 
 ## Skills
 
-**Proficient:** Python, Node.js, RDBMS/SQL, Java, Git
+**Proficient:** Python, Node.js, Express.js, RDBMS/SQL, Java, Git
 
-**Competent:** React.js, Express.js, HTML/CSS, Agile/Scrum, C, Android Studio
+**Competent:** React.js, HTML/CSS, Agile/Scrum, C, Android Studio
 
 **Familiar:** Linux/Bash, Docker, PHP, Pandas, VBA
 
@@ -17,12 +17,12 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_CarlaCasta
 
 **Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda/tree/master/linux_sql)]:
       
-  - Created a Monitoring Agent program using Bash scripts which collect hardware specs and memory usage data from nodes in Linux cluster. I did this by creating a PSQL instance with docker and creating a database called host_agent using PSQL REPL and creating tables host_info and host_usage to store the hardware specs and server usage. I then created shell scripts host_info.sh and host_usage.sh to collect the information with bash commands stored in variables and then inserted them into the respective database tables . host_usage.sh inserts a new entry to the host_usage table every minute that the server is running and is healthy. We do this by using crontab to schedule the script to execute every minute.
+  - Created a Monitoring Agent program using Bash scripts which collect hardware specs and memory usage data from nodes in Linux cluster. I did this by creating a PSQL instance with docker and creating a database called host_agent using PSQL REPL and creating tables host_info and host_usage to store the hardware specs and server usage. I then created shell scripts host_info.sh and host_usage.sh to collect the information with bash commands stored in variables and then inserted them into the respective database tables. host_usage.sh inserts a new entry to the host_usage table every minute that the server is running and is healthy. We do this by using crontab to schedule the script to execute every minute.
   - Technologies used PSQL, Docker, Linux/Bash, git/github, shell scripts
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda/tree/master/core_java)]:
       
-  - Twitter App:
+  - Twitter App: Developed a Twitter CRUD App that uses twitter's official API, Java and followed the MVC design pattern to create data models of the tweet object and DAOs to get tweet data in the form of post and get requests.I also implemented a service layer to implement the business logic, controller which calls corresponding service method depending on the arguments passed. Used springboot to implement dependency management.
   - JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker psql instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in database using CRUD operations and Customer objects, PSQL to acess database, MVN, Docker, intelliji and git/ github.
   - Grep App: Developed a Grep (regex) style application in Java which is able to parse through a directory of Files, similar to the grep linux command which returns matching strings from files.Able to recursively check a root directory and all its child directories for files which contain the regex pattern specified by user in command line arguments and write the matching lines to a file also specified by user.I have used a number of libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, Regex API.The IDE used is Intelliji and docker was used for deployment. 
 
