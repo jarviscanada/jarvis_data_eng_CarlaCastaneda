@@ -23,7 +23,7 @@
     },
     {
       "description": "Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the amount of time the puzzles take to be solved. Can solve puzzles randomly generated or take user input. Allows the user to solve puzzles of varying difficulties and highlights the sudoku box in red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB",
-      "git_url": "https://github.com/carlaac99/SudokuAC3",
+      "git_url": "https://github.com/carlaac99/CP476-FinalProject",
       "name": "Sudoku Puzzle Solver"
     }
   ],
