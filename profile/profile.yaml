@@ -87,11 +87,11 @@ education:
    department: "Computer Science"
  # optional
    awards_achievements: 
- - "Entrance Scholarship- Faculty of Science"
- - "Dean's List (2017, 2018): Faculty of Science"
- - "Dean's List (2020, 2021): Faculty of Science"
- - "GPA: 10.56/12"
- - "Graduated With Distinction"
+     - "Entrance Scholarship- Faculty of Science"
+     - "Dean's List (2017, 2018): Faculty of Science"
+     - "Dean's List (2020, 2021): Faculty of Science"
+     - "GPA: 10.56/12"
+     - "Graduated With Distinction"
 
 #Optional section
 others:
