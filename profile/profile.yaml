@@ -86,7 +86,7 @@ education:
    degree: "Honours Bachelor of Science"
    department: "Computer Science"
  # optional
-   awards_achievements: 
+ - awards_achievements: 
      - "Entrance Scholarship- Faculty of Science"
      - "Dean's List (2017, 2018): Faculty of Science"
      - "Dean's List (2020, 2021): Faculty of Science"
