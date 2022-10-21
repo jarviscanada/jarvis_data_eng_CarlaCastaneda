@@ -1,109 +1,109 @@
 # Preferred name (Characters only)
-	name: "Carla Castaneda"
-	# Your GitHub repo root URL
-	github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda
-	 
-	# Introduce yourself, and your academic and professional background.
-	# What excites you about the software industry and your passion? At least 80 words
-	summary: I am a recent Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. As a result, I am most excited about how artificial Intelligence will progress and help better the lives of people by providing solutions for many global and local issues. I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. In my current role at Jarvis Consulting, I have been able to strengthen my problem-solving skills and my knowledge of object-oriented programming and APIs, and also be able to pick up on so many new technical skills such as bash scripting and Agile development.
-	# Group your skills by level.
-	# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
-	skills:
-	 # At least 5 skills
-	 proficient:
-	 - Python
-	 - Node.js
-   - Angular
-	 - Express.js
-	 - RDBMS/SQL
-   - Knex.js
-	 - Java
-	 - Git
-	 # At least 5 skills
-	 competent:
-	 - React.js
-	 - HTML/CSS
-	 - Agile/Scrum
-	 - C
-	 - Android Studio
-	 # At least 5 skills
-	 familiar:
-	 - Linux/Bash
-	 - Docker
-	 - PHP
-	 - Pandas
-	 - VBA
-	 
-	# List of Jarvis project
-	jarvis_projects:
-	 - name: "Cluster Monitor"
-	 git_url: "/linux_sql"
-	 # The project description allows hiring managers to understand your project and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
-	 # The project description must start with an action verb (https://bit.ly/3guO98u)
-	 description: 
-	 - "Created a Monitoring Agent program using Bash scripts which collect hardware specs and memory usage data from nodes in Linux cluster. I did this by creating a PSQL instance with docker and creating a database called host_agent using PSQL REPL and creating tables host_info and host_usage to store the hardware specs and server usage. I then created shell scripts host_info.sh and host_usage.sh to collect the information with bash commands stored in variables and then inserted them into the respective database tables. host_usage.sh inserts a new entry to the host_usage table every minute that the server is running and is healthy. We do this by using crontab to schedule the script to execute every minute."
-	 - "Technologies used PSQL, Docker, Linux/Bash, git/github, shell scripts"
-	 
-	 - name: "Core Java Apps"
-	 git_url: "/core_java"
-	 description:
-	 - "Twitter App: Developed a Twitter CRUD App that uses twitter's official API, Java, and followed the MVC design pattern to create data models of the tweet object and DAOs to get tweet data in the form of posts and get requests. I also implemented a service layer to implement the business logic, a controller which calls the corresponding service method depending on the arguments passed. I used spring boot to implement dependency management."
-	 - "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker PSQL instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in the database using CRUD operations and Customer objects, PSQL to access database, MVN, Docker, IntelliJ, and git/ GitHub."
-	 - "Grep App: Developed a Grep (regex) style application in Java which can parse through a directory of Files, similar to the grep Linux command which returns matching strings from files. Able to recursively check a root directory and all its child directories for files that contain the regex pattern specified by the user in command line arguments and write the matching lines to a file also specified by the user. I have used several libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, and Regex API. The IDE used is Intelliji and docker was used for deployment. "
-	 
-	# List of personal or academic projects
-	# Feel free to add more projects
-	highlighted_projects:
-	 #project name
-	 - name: "CuddleBug App"
-	 #URL is optional
-	 git_url: "https://github.com/carlaac99/CP470finalproject"
-	 # The project description must start with an action verb (https://bit.ly/3guO98u)
-	 description: Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Used Google Firebase to implement user login and MongoDB to store users and movies.
-	 - name: "Sudoku Puzzle Solver"
-	 git_url: "https://github.com/carlaac99/SudokuAC3"
-	 description: Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the amount of time the puzzles take to be solved. Can solve puzzles randomly generated or take user input. Allows the user to solve puzzles of varying difficulties and highlights the sudoku box in red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB
-	#List of professional experience
-	#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
-	#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, and communication).
-	professional_experience:
-	 #Write your Jarvis role as a professional experience rather than training.
-	 - title: "Software Developer"
-	 company: "Jarvis"
-	 duration: "2022-present"
-	 # The project description must start with an action verb (https://bit.ly/3guO98u)
-	 description: "Develop Full stack solutions using programs and applications for clients with different business needs "
-	 - title: "Tutor"
-	 company: "Code Ninjas"
-	 duration: "2020-2021"
-	 description: "Introduced students to programming concepts using Javascript and Code Ninjas curriculum.
-	 Created, Implemented, and Managed student progress feedback system for parents and built strong relationships with parents and students"
-	 
-	#List of education
-	education: 
-	 - school_name: "Wilfrid Laurier University"
-	 duration: "2017-2022"
-	 degree: "Honours Bachelor of Science"
-	 department: "Computer Science"
-	 # optional
-	 awards_achievements: 
-	 - "Entrance Scholarship- Faculty of Science"
-	 - "Dean's List (2017, 2018): Faculty of Science"
-	 - "Dean's List (2020, 2021): Faculty of Science"
-	 - "GPA: 10.56/12"
-	 - "Graduated With Distinction"
-	 
-	#Optional section
-	others:
-	 #category
-	 - title: "Other Skills"
-	 #list of items
-	 bullets:
-	 - "Video Editing"
-	 - "Digital Advertising and Marketing"
-	 
-	 - title: "Activities/Hobbies"
-	 bullets:
-	 - "Flamenco"
-	 - "Painting"
-	 - "Hiking"
+name: "Carla Castaneda"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda
+
+# Introduce yourself, and your academic and professional background.
+# What excites you about the software industry and your passion? At least 80 words
+summary: I am a recent Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. As a result, I am most excited about how artificial Intelligence will progress and help better the lives of people by providing solutions for many global and local issues. I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. In my current role at Jarvis Consulting, I have been able to strengthen my problem-solving skills and my knowledge of object-oriented programming and APIs, and also be able to pick up on so many new technical skills such as bash scripting and Agile development.
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+ # At least 5 skills
+ proficient:
+ - Python
+ - Node.js
+ - Angular
+ - Express.js
+ - RDBMS/SQL
+ - Knex.js
+ - Java
+ - Git
+ # At least 5 skills
+ competent:
+ - React.js
+ - HTML/CSS
+ - Agile/Scrum
+ - C
+ - Android Studio
+ # At least 5 skills
+ familiar:
+ - Linux/Bash
+ - Docker
+ - PHP
+ - Pandas
+ - VBA
+
+# List of Jarvis project
+jarvis_projects:
+ - name: "Cluster Monitor"
+ git_url: "/linux_sql"
+ # The project description allows hiring managers to understand your project and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+ # The project description must start with an action verb (https://bit.ly/3guO98u)
+ description: 
+ - "Created a Monitoring Agent program using Bash scripts which collect hardware specs and memory usage data from nodes in Linux cluster. I did this by creating a PSQL instance with docker and creating a database called host_agent using PSQL REPL and creating tables host_info and host_usage to store the hardware specs and server usage. I then created shell scripts host_info.sh and host_usage.sh to collect the information with bash commands stored in variables and then inserted them into the respective database tables. host_usage.sh inserts a new entry to the host_usage table every minute that the server is running and is healthy. We do this by using crontab to schedule the script to execute every minute."
+ - "Technologies used PSQL, Docker, Linux/Bash, git/github, shell scripts"
+
+ - name: "Core Java Apps"
+ git_url: "/core_java"
+ description:
+ - "Twitter App: Developed a Twitter CRUD App that uses twitter's official API, Java, and followed the MVC design pattern to create data models of the tweet object and DAOs to get tweet data in the form of posts and get requests. I also implemented a service layer to implement the business logic, a controller which calls the corresponding service method depending on the arguments passed. I used spring boot to implement dependency management."
+ - "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker PSQL instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in the database using CRUD operations and Customer objects, PSQL to access database, MVN, Docker, IntelliJ, and git/ GitHub."
+ - "Grep App: Developed a Grep (regex) style application in Java which can parse through a directory of Files, similar to the grep Linux command which returns matching strings from files. Able to recursively check a root directory and all its child directories for files that contain the regex pattern specified by the user in command line arguments and write the matching lines to a file also specified by the user. I have used several libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, and Regex API. The IDE used is Intelliji and docker was used for deployment. "
+
+# List of personal or academic projects
+# Feel free to add more projects
+highlighted_projects:
+ #project name
+ - name: "CuddleBug App"
+ #URL is optional
+ git_url: "https://github.com/carlaac99/CP470finalproject"
+ # The project description must start with an action verb (https://bit.ly/3guO98u)
+ description: Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Used Google Firebase to implement user login and MongoDB to store users and movies.
+ - name: "Sudoku Puzzle Solver"
+ git_url: "https://github.com/carlaac99/SudokuAC3"
+ description: Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the amount of time the puzzles take to be solved. Can solve puzzles randomly generated or take user input. Allows the user to solve puzzles of varying difficulties and highlights the sudoku box in red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, and communication).
+professional_experience:
+ #Write your Jarvis role as a professional experience rather than training.
+ - title: "Software Developer"
+ company: "Jarvis"
+ duration: "2022-present"
+ # The project description must start with an action verb (https://bit.ly/3guO98u)
+ description: "Develop Full stack solutions using programs and applications for clients with different business needs "
+ - title: "Tutor"
+ company: "Code Ninjas"
+ duration: "2020-2021"
+ description: "Introduced students to programming concepts using Javascript and Code Ninjas curriculum.
+ Created, Implemented, and Managed student progress feedback system for parents and built strong relationships with parents and students"
+
+#List of education
+education: 
+ - school_name: "Wilfrid Laurier University"
+ duration: "2017-2022"
+ degree: "Honours Bachelor of Science"
+ department: "Computer Science"
+ # optional
+ awards_achievements: 
+ - "Entrance Scholarship- Faculty of Science"
+ - "Dean's List (2017, 2018): Faculty of Science"
+ - "Dean's List (2020, 2021): Faculty of Science"
+ - "GPA: 10.56/12"
+ - "Graduated With Distinction"
+
+#Optional section
+others:
+ #category
+ - title: "Other Skills"
+ #list of items
+ bullets:
+ - "Video Editing"
+ - "Digital Advertising and Marketing"
+
+ - title: "Activities/Hobbies"
+ bullets:
+ - "Flamenco"
+ - "Painting"
+ - "Hiking"
