@@ -17,7 +17,7 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda",
   "highlighted_projects": [
     {
-      "description": "Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Used Google Firebase to implement user login and MongoDB to store users and movies.",
+      "description": "Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Users swipe through movie titles and their posters, swiping left for dislike and right for movies they like. The movies they like then get added to their movie list called 'MyList'. For users to add friends, they must add. Used Google Firebase to implement user login, MongoDB to store users and movies, and our REST API to GET movies and their data on Android Studio with Java as the programming language.",
       "git_url": "https://github.com/carlaac99/CP470finalproject",
       "name": "CuddleBug App"
     },
@@ -67,13 +67,13 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Develop Full stack solutions using programs and applications for clients with different business needs ",
+      "description": "Develop Full stack solutions using programs and applications for clients with different business needs. Practice Agile development through daily scrum meetings, using scrum boards during development, and bi-weekly sprint meetings where my team members and I discuss our progress and any impedimients that we may be experiencing as we are developing.",
       "duration": "2022-present",
       "title": "Software Developer"
     },
     {
       "company": "Code Ninjas",
-      "description": "Introduced students to programming concepts using Javascript and Code Ninjas curriculum. Created, Implemented, and Managed student progress feedback system for parents and built strong relationships with parents and students",
+      "description": "Introduced students to programming using Scratch, Javascript, and the Code Ninjas curriculum based on the age and experience of the student.taught students basic Javascript syntax as well as fundamental programming concepts such as loops, global variables, data types (boolean, integer), and conditional statements in an interactive and fun way by creating simple games provided by the Code Ninjas Curriculum. Created, Implemented, and Managed student progress feedback system for parents and built strong communication skills through interactions with parents and students.",
       "duration": "2020-2021",
       "title": "Tutor"
     }
