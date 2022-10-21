@@ -2,7 +2,7 @@
   "education": [
     {
       "awards_achievements": [
-        "Entrance Scholarship- Faculty of Science",
+        "Entrance Scholarship: Faculty of Science",
         "Dean's List (2017, 2018): Faculty of Science",
         "Dean's List (2020, 2021): Faculty of Science",
         "GPA: 10.56/12",
@@ -17,12 +17,12 @@
   "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda",
   "highlighted_projects": [
     {
-      "description": "Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Used Google Firebase to implement user login and mongodb to store users and movies.",
+      "description": "Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Used Google Firebase to implement user login and MongoDB to store users and movies.",
       "git_url": "https://github.com/carlaac99/CP470finalproject",
       "name": "CuddleBug App"
     },
     {
-      "description": "Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the amount of time the puzzles take to be solved. Can solve puzzles randomly generated or take user input. Allows for user to solve puzzles of varying difficulties and highlights sudoku box red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB",
+      "description": "Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the amount of time the puzzles take to be solved. Can solve puzzles randomly generated or take user input. Allows the user to solve puzzles of varying difficulties and highlights the sudoku box in red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB",
       "git_url": "https://github.com/carlaac99/SudokuAC3",
       "name": "Sudoku Puzzle Solver"
     }
@@ -38,9 +38,9 @@
     },
     {
       "description": [
-        "Twitter App: Developed a Twitter CRUD App that uses twitter's official API, Java and followed the MVC design pattern to create data models of the tweet object and DAOs to get tweet data in the form of post and get requests.I also implemented a service layer to implement the business logic, controller which calls corresponding service method depending on the arguments passed. Used springboot to implement dependency management.",
-        "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker psql instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in database using CRUD operations and Customer objects, PSQL to acess database, MVN, Docker, intelliji and git/ github.",
-        "Grep App: Developed a Grep (regex) style application in Java which is able to parse through a directory of Files, similar to the grep linux command which returns matching strings from files.Able to recursively check a root directory and all its child directories for files which contain the regex pattern specified by user in command line arguments and write the matching lines to a file also specified by user.I have used a number of libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, Regex API.The IDE used is Intelliji and docker was used for deployment. "
+        "Twitter App: Developed a Twitter CRUD App that uses twitter's official API, Java, and followed the MVC design pattern to create data models of the tweet object and DAOs to get tweet data in the form of posts and get requests. I also implemented a service layer to implement the business logic, a controller which calls the corresponding service method depending on the arguments passed. I used spring boot to implement dependency management.",
+        "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker PSQL instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in the database using CRUD operations and Customer objects, PSQL to access database, MVN, Docker, IntelliJ, and git/ GitHub.",
+        "Grep App: Developed a Grep (regex) style application in Java which can parse through a directory of Files, similar to the grep Linux command which returns matching strings from files. Able to recursively check a root directory and all its child directories for files that contain the regex pattern specified by the user in command line arguments and write the matching lines to a file also specified by the user. I have used several libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, and Regex API. The IDE used is Intelliji and docker was used for deployment. "
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
@@ -67,13 +67,13 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Develop Full stack solutions using programs and application for clients with differing business needs ",
+      "description": "Develop Full stack solutions using programs and applications for clients with different business needs ",
       "duration": "2022-present",
       "title": "Software Developer"
     },
     {
       "company": "Code Ninjas",
-      "description": "Introduced students to programming concepts using Javascript and Code Ninjas curriculum. Created, Implemented and Managed student progress feedback system for parents and built strong relationships with parents and students",
+      "description": "Introduced students to programming concepts using Javascript and Code Ninjas curriculum. Created, Implemented, and Managed student progress feedback system for parents and built strong relationships with parents and students",
       "duration": "2020-2021",
       "title": "Tutor"
     }
@@ -96,11 +96,13 @@
     "proficient": [
       "Python",
       "Node.js",
+      "Angular",
       "Express.js",
       "RDBMS/SQL",
+      "Knex.js",
       "Java",
       "Git"
     ]
   },
-  "summary": "I am a recent Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. As a result, I am most excited about how artificial Intelligence will progress and help better the lives of people  by providing solutions for many global and local issues.I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. At my current role at Jarvis Consulting I have been able to strengthen my problem solving skills and my knowledge of object oriented programming and APIs, and as well, be able to pick up on so many new technical skills such as bash scripting and Agile development."
+  "summary": "I am a recent Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. As a result, I am most excited about how artificial Intelligence will progress and help better the lives of people by providing solutions for many global and local issues. I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. In my current role at Jarvis Consulting, I have been able to strengthen my problem-solving skills and my knowledge of object-oriented programming and APIs, and also be able to pick up on so many new technical skills such as bash scripting and Agile development."
 }
