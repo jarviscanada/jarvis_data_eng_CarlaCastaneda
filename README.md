@@ -1,8 +1,6 @@
 
 
 
-cat > README.md <<
-
 
 
 
