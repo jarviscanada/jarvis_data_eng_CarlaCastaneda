@@ -22,7 +22,7 @@
       "name": "CuddleBug App"
     },
     {
-      "description": "Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the amount of time the puzzles take to be solved. Can solve puzzles randomly generated or take user input. Allows the user to solve puzzles of varying difficulties and highlights the sudoku box in red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB",
+      "description": "Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the time the puzzles take to solve. Can solve puzzles randomly generated or take user input. Allows the user to solve puzzles of varying difficulties and highlights the sudoku box in red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB",
       "git_url": "https://github.com/carlaac99/CP476-FinalProject",
       "name": "Sudoku Puzzle Solver"
     }
@@ -30,8 +30,8 @@
   "jarvis_projects": [
     {
       "description": [
-        "Created a Monitoring Agent program using Bash scripts which collect hardware specs and memory usage data from nodes in Linux cluster. I did this by creating a PSQL instance with docker and creating a database called host_agent using PSQL REPL and creating tables host_info and host_usage to store the hardware specs and server usage. I then created shell scripts host_info.sh and host_usage.sh to collect the information with bash commands stored in variables and then inserted them into the respective database tables. host_usage.sh inserts a new entry to the host_usage table every minute that the server is running and is healthy. We do this by using crontab to schedule the script to execute every minute.",
-        "Technologies used PSQL, Docker, Linux/Bash, git/github, shell scripts"
+        "Created a Monitoring Agent program using Bash scripts which collect hardware specs and memory usage data from nodes in Linux cluster. I did this by creating a PSQL instance with docker, a database called host_agent using PSQL REPL, and tables host_info and host_usage to store the hardware specs and server usage. I then created shell scripts host_info.sh and host_usage.sh to collect the information with bash commands stored in variables and then inserted them into the respective database tables. host_usage.sh inserts a new entry to the host_usage table every minute that the server is running and is healthy. We do this by using crontab to schedule the script to execute every minute.",
+        "Technologies used PSQL, Docker, Linux/Bash, git/GitHub, shell scripts"
       ],
       "git_url": "/linux_sql",
       "name": "Cluster Monitor"
@@ -67,13 +67,13 @@
   "professional_experience": [
     {
       "company": "Jarvis",
-      "description": "Develop Full stack solutions using programs and applications for clients with different business needs. Practice Agile development through daily scrum meetings, using scrum boards during development, and bi-weekly sprint meetings where my team members and I discuss our progress and any impedimients that we may be experiencing as we are developing.",
+      "description": "Develop Full stack solutions using programs and applications for clients with different business needs. Practice Agile development through daily scrum meetings, using scrum boards during development, and bi-weekly sprint meetings where my team members and I discuss our progress and any impediments that we may be experiencing as we are developing.",
       "duration": "2022-present",
       "title": "Software Developer"
     },
     {
       "company": "Code Ninjas",
-      "description": "Introduced students to programming using Scratch, Javascript, and the Code Ninjas curriculum based on the age and experience of the student.taught students basic Javascript syntax as well as fundamental programming concepts such as loops, global variables, data types (boolean, integer), and conditional statements in an interactive and fun way by creating simple games provided by the Code Ninjas Curriculum. Created, Implemented, and Managed student progress feedback system for parents and built strong communication skills through interactions with parents and students.",
+      "description": "Introduced students to programming using Scratch, Javascript, and the Code Ninjas curriculum based on the age and experience of the student. taught students basic Javascript syntax as well as fundamental programming concepts such as loops, global variables, data types (boolean, integer), and conditional statements in an interactive and fun way by creating simple games provided by the Code Ninjas Curriculum. Created, Implemented, and Managed student progress feedback system for parents and built strong communication skills through interactions with parents and students.",
       "duration": "2020-2021",
       "title": "Tutor"
     }
@@ -104,5 +104,5 @@
       "Git"
     ]
   },
-  "summary": "I am a recent Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. As a result, I am most excited about how artificial Intelligence will progress and help better the lives of people by providing solutions for many global and local issues. I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. In my current role at Jarvis Consulting, I have been able to strengthen my problem-solving skills and my knowledge of object-oriented programming and APIs, and also be able to pick up on so many new technical skills such as bash scripting and Agile development."
+  "summary": "I am a Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. As a result, I am most excited about how artificial Intelligence will progress and help better the lives of people by providing solutions for many global and local issues. I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. In my current role at Jarvis Consulting, I have strengthened my problem-solving skills and knowledge of object-oriented programming and APIs. I also picked up many new technical skills such as bash scripting and Agile development."
 }
