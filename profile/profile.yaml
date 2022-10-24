@@ -36,11 +36,11 @@ skills:
 
 # List of Jarvis project
 jarvis_projects:
- - name: "Cluster Monitor"
-   git_url: "/linux_sql"
+- name: "Cluster Monitor"
+  git_url: "/linux_sql"
  # The project description allows hiring managers to understand your project and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
  # The project description must start with an action verb (https://bit.ly/3guO98u)
-   description: 
+  description: 
        - "Created a Monitoring Agent program using Bash scripts which collect hardware specs and memory usage data from nodes in Linux cluster. I did this by creating a PSQL instance with docker, a database called host_agent using PSQL REPL, and tables host_info and host_usage to store the hardware specs and server usage. I then created shell scripts host_info.sh and host_usage.sh to collect the information with bash commands stored in variables and then inserted them into the respective database tables. host_usage.sh inserts a new entry to the host_usage table every minute that the server is running and is healthy. We do this by using crontab to schedule the script to execute every minute."
        - "Technologies used PSQL, Docker, Linux/Bash, git/GitHub, shell scripts"
 
@@ -54,8 +54,8 @@ jarvis_projects:
 - name: "Twitter CRUD Web App"
   git_url: "https://github.com/carlaac99/TwitterCrud"
   description:
-       - "Created a twitter CRUD app to create delete and update tweets and usernames."
-       - "Technologies used: Angular to implement front end, Express.js to implement backend, and Knex.js used in the backend to connect to PostgreSQL database and build SQL queries."
+      - "Created a twitter CRUD app to create delete and update tweets and usernames."
+      - "Technologies used: Angular to implement front end, Express.js to implement backend, and Knex.js used in the backend to connect to PostgreSQL database and build SQL queries."
   
 # List of personal or academic projects
 # Feel free to add more projects

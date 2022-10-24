@@ -44,6 +44,14 @@
       ],
       "git_url": "/core_java",
       "name": "Core Java Apps"
+    },
+    {
+      "description": [
+        "Created a twitter CRUD app to create delete and update tweets and usernames.",
+        "Technologies used: Angular to implement front end, Express.js to implement backend, and Knex.js used in the backend to connect to PostgreSQL database and build SQL queries."
+      ],
+      "git_url": "https://github.com/carlaac99/TwitterCrud",
+      "name": "Twitter CRUD Web App"
     }
   ],
   "name": "Carla Castaneda",
