@@ -44,13 +44,19 @@ jarvis_projects:
        - "Created a Monitoring Agent program using Bash scripts which collect hardware specs and memory usage data from nodes in Linux cluster. I did this by creating a PSQL instance with docker, a database called host_agent using PSQL REPL, and tables host_info and host_usage to store the hardware specs and server usage. I then created shell scripts host_info.sh and host_usage.sh to collect the information with bash commands stored in variables and then inserted them into the respective database tables. host_usage.sh inserts a new entry to the host_usage table every minute that the server is running and is healthy. We do this by using crontab to schedule the script to execute every minute."
        - "Technologies used PSQL, Docker, Linux/Bash, git/GitHub, shell scripts"
 
- - name: "Core Java Apps"
-   git_url: "/core_java"
-   description:
-       - "Twitter App: Developed a Twitter CRUD App that uses twitter's official API, Java, and followed the MVC design pattern to create data models of the tweet object and DAOs to get tweet data in the form of posts and get requests. I also implemented a service layer to implement the business logic, a controller which calls the corresponding service method depending on the arguments passed. I used spring boot to implement dependency management."
-       - "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker PSQL instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in the database using CRUD operations and Customer objects, PSQL to access database, MVN, Docker, IntelliJ, and git/ GitHub."
-       - "Grep App: Developed a Grep (regex) style application in Java which can parse through a directory of Files, similar to the grep Linux command which returns matching strings from files. Able to recursively check a root directory and all its child directories for files that contain the regex pattern specified by the user in command line arguments and write the matching lines to a file also specified by the user. I have used several libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, and Regex API. The IDE used is Intelliji and docker was used for deployment. "
+- name: "Core Java Apps"
+  git_url: "/core_java"
+  description:
+      - "Twitter App: Developed a Twitter CRUD App that uses twitter's official API, Java, and followed the MVC design pattern to create data models of the tweet object and DAOs to get tweet data in the form of posts and get requests. I also implemented a service layer to implement the business logic, a controller which calls the corresponding service method depending on the arguments passed. I used spring boot to implement dependency management."
+      - "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker PSQL instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in the database using CRUD operations and Customer objects, PSQL to access database, MVN, Docker, IntelliJ, and git/ GitHub."
+      - "Grep App: Developed a Grep (regex) style application in Java which can parse through a directory of Files, similar to the grep Linux command which returns matching strings from files. Able to recursively check a root directory and all its child directories for files that contain the regex pattern specified by the user in command line arguments and write the matching lines to a file also specified by the user. I have used several libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, and Regex API. The IDE used is Intelliji and docker was used for deployment. "
 
+- name: "Twitter CRUD Web App"
+  git_url: "https://github.com/carlaac99/TwitterCrud"
+  description:
+       - "Created a twitter CRUD app to create delete and update tweets and usernames."
+       - "Technologies used: Angular to implement front end, Express.js to implement backend, and Knex.js used in the backend to connect to PostgreSQL database and build SQL queries."
+  
 # List of personal or academic projects
 # Feel free to add more projects
 highlighted_projects:
