@@ -28,7 +28,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_CarlaCasta
 
 
 ## Highlighted Projects
-**CuddleBug App** [[GitHub](https://github.com/carlaac99/CP470finalproject)]: Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Used Google Firebase to implement user login and mongodb to store users and movies.
+**CuddleBug App** [[GitHub](https://github.com/carlaac99/CP470finalproject)]: Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Users swipe through movie titles and their posters, swiping left for dislike and right for movies they like. The movies they like then get added to their movie list called 'MyList'. For users to add friends, they must add. Used Google Firebase to implement user login, MongoDB to store users and movies, and our REST API to GET movies and their data on Android Studio with Java as the programming language.
 
 **Sudoku Puzzle Solver** [[GitHub](https://github.com/carlaac99/CP476-FinalProject)]: Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the amount of time the puzzles take to be solved. Can solve puzzles randomly generated or take user input. Allows for user to solve puzzles of varying difficulties and highlights sudoku box red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB
 
