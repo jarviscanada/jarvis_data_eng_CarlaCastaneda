@@ -119,7 +119,7 @@ public class TwitterService implements Service{
     if (fields!=null){
       for ( String i:fields){
 
-        if ( possible_fields.contains(i)) {
+        if(possible_fields.contains(i)) {
           possible_fields.remove(i);
 
         }}
@@ -159,7 +159,7 @@ public class TwitterService implements Service{
   public List<Tweet> deleteTweets(String[] ids) {
     List<Tweet> tweets= new ArrayList<>();
 
-    for( String id: ids){
+    for(String id: ids){
       Boolean result = validateId(id);
       if (result== true){
 
@@ -168,14 +168,12 @@ public class TwitterService implements Service{
           Tweet tweet = (Tweet) dao.deleteById(id);
           tweets.add(tweet);
         }  catch(Exception e){
+
           throw new IllegalArgumentException("tweet id doesnt exist");
         }
       }
 
-
-
     }
-
 
     return tweets;
   }

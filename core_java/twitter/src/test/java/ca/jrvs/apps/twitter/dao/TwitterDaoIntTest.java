@@ -39,31 +39,31 @@ public class TwitterDaoIntTest {
     this.dao=new TwitterDao(httpHelper);
   }
 
-  @Test
-  public void create() throws Exception {
-
-
-
-    Tweet tweet= new Tweet();
-    String hashtag="#abc";
-    tweet.setText("Hi I am in France!"+hashtag+" ");
-    List<Double> coordinates= Arrays.asList(1d,-1d);
-    Coordinates c= new Coordinates();
-    c.setCoordinates(coordinates);
-    tweet.setCoordinates(c);
-    System.out.println( toJson(tweet,true,true));
-    Tweet newTweet= this.dao.create(tweet);
-
-
-
-    assertTrue(hashtag.contains(newTweet.getEntities().getHashTag().get(0).getText()));
-
-
-
-//    this.dao.create(tweet);
-
-
-  }
+//  @Test
+//  public void create() throws Exception {
+//
+//
+//
+//    Tweet tweet= new Tweet();
+//    String hashtag="#abc";
+//    tweet.setText("Hi I am in Francffffffe!"+hashtag+" ");
+//    List<Double> coordinates= Arrays.asList(1d,-1d);
+//    Coordinates c= new Coordinates();
+//    c.setCoordinates(coordinates);
+//    tweet.setCoordinates(c);
+//    System.out.println( toJson(tweet,true,true));
+//    Tweet newTweet= this.dao.create(tweet);
+//
+//
+//
+//    assertTrue(hashtag.contains(newTweet.getEntities().getHashTag().get(0).getText()));
+//
+//
+//
+////    this.dao.create(tweet);
+//
+//
+//  }
 //  @Test
 //  public void deleteById(){
 //

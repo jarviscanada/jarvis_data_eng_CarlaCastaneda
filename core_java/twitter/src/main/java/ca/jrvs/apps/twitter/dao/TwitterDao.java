@@ -4,6 +4,7 @@ import static ca.jrvs.apps.twitter.example.JsonParser.toJson;
 import static ca.jrvs.apps.twitter.example.JsonParser.toObjectFromJSON;
 
 import ca.jrvs.apps.twitter.dao.helper.HttpHelper;
+import ca.jrvs.apps.twitter.dao.helper.TwitterHttpHelper;
 import ca.jrvs.apps.twitter.model.Tweet;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.gdata.util.common.base.PercentEscaper;
@@ -216,15 +217,15 @@ public class TwitterDao implements CrdDao<Tweet, String> {
     return responseToTweet(HTTP_OK, response);
   }
 
-//  public static void main(String[] args) throws JsonProcessingException {
-//    String consumerKey = System.getenv("consumerKey");
-//    String consumerSecret = System.getenv("consumerSecret");
-//    String accessToken = System.getenv("accessToken");
-//    String tokenSecret = System.getenv("tokenSecret");
-//    HttpHelper httpHelper= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
-//
-//    CrdDao<Tweet,String> twitterDao= new TwitterDao(httpHelper);
-//    Tweet t=twitterDao.findById("1567593424232103936");
-//    System.out.println(toJson(t,true,false));
-//  }
+  public static void main(String[] args) throws JsonProcessingException {
+    String consumerKey = System.getenv("consumerKey");
+    String consumerSecret = System.getenv("consumerSecret");
+    String accessToken = System.getenv("accessToken");
+    String tokenSecret = System.getenv("tokenSecret");
+    HttpHelper httpHelper= new TwitterHttpHelper(consumerKey,consumerSecret,accessToken,tokenSecret);
+
+    CrdDao<Tweet,String> twitterDao= new TwitterDao(httpHelper);
+    Tweet t=twitterDao.findById("1567593424232103936");
+    System.out.println(toJson(t,true,false));
+  }
 }
