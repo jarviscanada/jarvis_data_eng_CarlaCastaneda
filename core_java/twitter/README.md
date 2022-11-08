@@ -1,1 +1,29 @@
-hihihihi
+# Introduction
+(50-100 words)
+What does this app do? What technoglies you have used? (e.g. Twitter REST API, HTTP client, mvn, Java libs, docker etc..)
+
+This application make calls to the official Twitter API to post, find and delete tweets. Technologies used are the Twitter REST API to make api calls, HTTP client, maven, Java and docker.
+
+# Quick Start
+- how to package your app using mvn?
+- how to run your app with docker?
+
+# Design
+## UML diagram
+
+## explain each component(app/main, controller, service, DAO) (30-50 words each)
+
+## Models
+Talk about tweet model
+
+## Spring
+- How you managed the dependencies using Spring?
+
+# Test
+How did you test you app using Junit and mockito?
+
+## Deployment
+How did you dockerize your app.
+
+# Improvements
+- improvements
