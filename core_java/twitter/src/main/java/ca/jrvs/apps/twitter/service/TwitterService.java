@@ -17,10 +17,14 @@ import java.util.LinkedList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+@org.springframework.stereotype.Service
 
 public class TwitterService implements Service{
   private CrdDao dao;
   static final Logger logger = LoggerFactory.getLogger(TwitterService.class);
+  @Autowired
   public TwitterService (CrdDao dao){this.dao = dao;}
 
   @Override
@@ -115,7 +119,7 @@ public class TwitterService implements Service{
     if (fields!=null){
       for ( String i:fields){
 
-        if ( possible_fields.contains(i)) {
+        if(possible_fields.contains(i)) {
           possible_fields.remove(i);
 
         }}
@@ -155,7 +159,7 @@ public class TwitterService implements Service{
   public List<Tweet> deleteTweets(String[] ids) {
     List<Tweet> tweets= new ArrayList<>();
 
-    for( String id: ids){
+    for(String id: ids){
       Boolean result = validateId(id);
       if (result== true){
 
@@ -164,14 +168,12 @@ public class TwitterService implements Service{
           Tweet tweet = (Tweet) dao.deleteById(id);
           tweets.add(tweet);
         }  catch(Exception e){
+
           throw new IllegalArgumentException("tweet id doesnt exist");
         }
       }
 
-
-
     }
-
 
     return tweets;
   }

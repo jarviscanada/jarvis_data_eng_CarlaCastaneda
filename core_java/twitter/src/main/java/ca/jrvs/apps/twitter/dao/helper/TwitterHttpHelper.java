@@ -13,7 +13,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
+@org.springframework.stereotype.Component
 
 public class TwitterHttpHelper implements HttpHelper {
 
@@ -32,9 +34,29 @@ public class TwitterHttpHelper implements HttpHelper {
    * @param accessToken
    * @param tokenSecret
    */
-
   public TwitterHttpHelper(String consumerKey, String consumerSecret, String accessToken,
       String tokenSecret) {
+
+    consumer = new CommonsHttpOAuthConsumer(consumerKey,
+        consumerSecret);
+    consumer.setTokenWithSecret(accessToken, tokenSecret);
+    /**
+     * Default = single connection. A Discuss source code if time permit
+     */
+    httpClient = new DefaultHttpClient();
+
+  }
+  public TwitterHttpHelper(){
+
+//    String consumerKey = System.getenv("consumerKey");
+//    String consumerSecret = System.getenv("consumerSecret");
+//    String accessToken = System.getenv("accessToken");
+//    String tokenSecret = System.getenv("tokenSecret");
+
+      String consumerKey = "o6mPobtw22rgWjzyBEJL82asi";
+      String consumerSecret= "mZ3OMzDTqk4TkFSWhGjeCSG81qOgcPbNRIbYxv8yzTr3qdXWK0";
+      String accessToken="1554530689961414658-suwxbNjzz3tg8sdXJM0ystmtQ30CQL";
+      String tokenSecret="VuTJnSKodclFnkpTgJDfODjSO3b8RZCjwoU6LBFnblp6Z";
     consumer = new CommonsHttpOAuthConsumer(consumerKey,
         consumerSecret);
     consumer.setTokenWithSecret(accessToken, tokenSecret);
@@ -42,8 +64,8 @@ public class TwitterHttpHelper implements HttpHelper {
      * Default = single connectionA. Discuss source code if time permit
      */
     httpClient = new DefaultHttpClient();
-
   }
+
 
   /**
    * @param uri
@@ -101,7 +123,6 @@ public class TwitterHttpHelper implements HttpHelper {
   @Override
   public HttpResponse httpGet(URI uri) {
     HttpResponse response = fetchResponse(uri, HttpMethod.GET);
-//
 //    try{
 //      EntityUtils.consume(response.getEntity());
 //    }catch (IOException e){
@@ -110,6 +131,10 @@ public class TwitterHttpHelper implements HttpHelper {
     return response;
 
   }
+
+//  public static void main(String[] args) {
+//
+//  }
 
 
 
