@@ -13,6 +13,7 @@ This Twitter Crud application makes calls to the official Twitter API to post, f
 # Design
 ## UML diagram
 ![image](../assets/SpringBoot.JPG)
+spring dependencies diagram
 
 ## explain each component(app/main, controller, service, DAO) (30-50 words each)
 - App/main
