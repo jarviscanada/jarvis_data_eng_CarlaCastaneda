@@ -2,7 +2,7 @@
 (50-100 words)
 What does this app do? What technoglies you have used? (e.g. Twitter REST API, HTTP client, mvn, Java libs, docker etc..)
 
-This Twitter Crud application makes calls to the official Twitter API to post, find and delete tweets. Technologies used are the Twitter REST API to make api calls, HTTP client, maven, Java and docker. implemented Data Access Object (DAO) pattern. The Twitter DAO and httpHelper is seperated from the business logic of the app, and is where the API calls and API URL strings are formed.
+This Twitter Crud application makes calls to the official Twitter API to post, find and delete tweets. Technologies used are the Twitter REST API to make api calls, HTTP client, maven, Java and docker. implemented Data Access Object (DAO) pattern. The Twitter DAO and HttpHelper is seperated from the business logic of the app, and is where the API calls and API URL strings are formed with the help of the OAuthConsumer and HttpHelper libraries. 
 
 # Quick Start
 - how to package your app using mvn?
