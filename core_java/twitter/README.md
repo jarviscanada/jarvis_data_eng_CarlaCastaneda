@@ -6,9 +6,11 @@ This Twitter Crud application makes calls to the official Twitter API to post, f
 
 # Quick Start
 - how to package your app using mvn?
-  -- mvn package
+  -- mvn clean package
 - how to run your app with docker?
-  -- created dockerfile
+  - created dockerfile, build image from docker file and finally run the app on docker:
+ docker run --rm \
+ ${docker_user}/twitter "post" "we have a new twitter CEO" "1:-1"
 
 # Design
 ## UML diagram
