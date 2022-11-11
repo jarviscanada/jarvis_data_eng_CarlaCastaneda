@@ -8,9 +8,9 @@ This Twitter Crud application makes calls to the official Twitter API to post, f
 - how to package your app using mvn?
   -- mvn clean package
 - how to run your app with docker?
- - created dockerfile, build image from docker file and finally run the app on docker:
- - docker pull carlagcasta/twitter
- - docker run --rm \
+   - created dockerfile, build image from docker file and finally run the app on docker:
+   - docker pull carlagcasta/twitter
+   - docker run --rm \
  ${docker_user}/twitter post|show|delete [options]
 
 # Design
