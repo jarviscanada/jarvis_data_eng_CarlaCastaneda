@@ -22,14 +22,16 @@ spring dependencies diagram
 - App/main
   
 - Controller
+  - the controller layer handles the user input and checks that the correct input is passed when the service layer is called.
   
 - Service
-- 
+  - The service layer handles the business logic t o check input has the correct number of argument and that if a tweet is being posted it doesnt not exceeed 140 characters. Once all requirements are met, DAO layer is called to interect directly with the Twitter REST API, with the help of the httpHelper.
 
 - DAO
 
 ## Models
 Talk about tweet model
+* the tweet model includes different classes which encapsulate Tweet data such as Coordinates, Entities, Hashtag, UserMention and lastly the Tweet model itself which contains all these models. these models are classes with private vairables and public getters and setters which are then used to be displayed in JSON format.
 
 ## Spring
 - How you managed the dependencies using Spring?
