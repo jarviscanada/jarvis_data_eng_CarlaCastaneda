@@ -25,9 +25,10 @@ spring dependencies diagram
   - the controller layer handles the user input and checks that the correct input is passed when the service layer is called.
   
 - Service
-  - The service layer handles the business logic t o check input has the correct number of argument and that if a tweet is being posted it doesnt not exceeed 140 characters. Once all requirements are met, DAO layer is called to interect directly with the Twitter REST API, with the help of the httpHelper.
+  - The service layer handles the business logic to check the user input has the correct number of argument and that if a tweet is being posted it doesnt not exceeed 140 characters. Once all requirements are met, DAO layer is called to interect directly with the Twitter REST API, with the help of the httpHelper.
 
 - DAO
+  - The twitter DAO layer handles data from an extrernal storage in this case the twitter REST API, and does not have to worry about the business logic whcih is handled by the Service layer which called the DAO. the TwitterHtpHelper is responsible for executing the HTTP with a given URL and authorizes the HTTP requests with twitter secrets.
 
 ## Models
 Talk about tweet model
