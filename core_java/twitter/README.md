@@ -41,8 +41,11 @@ Talk about tweet model
   
 # Test
 How did you test you app using Junit and mockito?
+  - tested using Junit and Mockito
+  - throughrough testing to make sure the application worked as intended
 
 ## Deployment
+  - Deployment using docker
 How did you dockerize your app.
 
 # Improvements
