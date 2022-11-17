@@ -20,6 +20,7 @@ spring dependencies diagram
 
 ## explain each component(app/main, controller, service, DAO) (30-50 words each)
 - App/main
+  - created a class called TwitterCLIAppSpringBoot that has the annotation @SpringBootApplication on top of it and in the constructor the TwitterCLIApp is passed to the constructor as the app which is then run in the main function.
   
 - Controller
   - the controller layer handles the user input and checks that the correct input is passed when the service layer is called.
@@ -36,7 +37,8 @@ Talk about tweet model
 
 ## Spring
 - How you managed the dependencies using Spring?
-
+  - using the 
+  
 # Test
 How did you test you app using Junit and mockito?
 
