@@ -53,6 +53,11 @@ How did you test you app using Junit and mockito?
 ## Deployment
   - Deployment using docker
   - created twitter Dockerfile
+  -```
+   FROM openjdk:8-alpine
+COPY target/twitter*.jar /usr/local/app/grep/lib/twitter.jar
+ENTRYPOINT ["java","-jar","/usr/local/app/grep/lib/twitter.jar"]
+```
   - built and tested its usage through CLI
   - pushed the docker image to DockerHub
 
