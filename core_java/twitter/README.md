@@ -43,10 +43,13 @@ Talk about tweet model
 How did you test you app using Junit and mockito?
   - tested using Junit and Mockito
   - throughrough testing to make sure the application worked as intended
+  - TwitterController unit and integration test
+  - TwitterDAO unit (mockito) and integration test 
+  - Tweet Model test
+  - service layer unit (mockit) and integration tests
 
 ## Deployment
   - Deployment using docker
-How did you dockerize your app.
 
 # Improvements
 - improvements
