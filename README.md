@@ -44,7 +44,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_CarlaCasta
 **Wilfrid Laurier University (2017-2022)**, Honours Bachelor of Science, Computer Science
 - Entrance Scholarship- Faculty of Science
 - Dean's List (2017, 2018): Faculty of Science
-- Dean's List (2020, 2021): Faculty of Science
+- Dean's List (2020, 2022): Faculty of Science
 - GPA: 10.56/12
 - Graduated With Distinction
 
