@@ -37,7 +37,9 @@ Talk about tweet model
 
 ## Spring
 - How you managed the dependencies using Spring?
-  - using the 
+  - used the @Component Scan apprach to manage dependencies with Spring through dependency Injection. Used the @Autowired annotation to tell IoC container to inject dependency through the constructor.
+  - need to add annotation depending on what type of class it is for exmaple: @Controller, @Repository, @Component, @Service
+  -  all are subtypes of component
   
 # Test
 How did you test you app using Junit and mockito?
@@ -50,6 +52,9 @@ How did you test you app using Junit and mockito?
 
 ## Deployment
   - Deployment using docker
+  - created twitter Dockerfile
+  - built and tested its usage through CLI
+  - pushed the docker image to DockerHub
 
 # Improvements
 - improvements
