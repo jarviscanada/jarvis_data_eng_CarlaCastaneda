@@ -1,5 +1,7 @@
 package ca.jrvs.apps.trading;
 
+import java.util.Arrays;
+import java.util.ArrayList;
 class HelloWorld {
 
   // Your program begins with a call to main().
