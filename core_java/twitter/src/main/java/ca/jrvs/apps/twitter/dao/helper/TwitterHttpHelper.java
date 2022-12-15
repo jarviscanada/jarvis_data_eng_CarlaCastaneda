@@ -92,6 +92,7 @@ public class TwitterHttpHelper implements HttpHelper {
 
       } catch (OAuthException | IOException e) {
         logger.error("Authentication error", e.getMessage());
+
       }
 
 
