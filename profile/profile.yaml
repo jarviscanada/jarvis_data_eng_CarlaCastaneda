@@ -74,7 +74,14 @@ highlighted_projects:
 #The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, and communication).
 professional_experience:
  #Write your Jarvis role as a professional experience rather than training.
- - title: "Software Developer"
+ - title: "Configuration Developer"
+   company: "Teranet"
+   duration: "Jan. 2023- April 2024"
+ # The project description must start with an action verb (https://bit.ly/3guO98u)
+   description: "- Collaborate with cross-functional teams, including QA, product managers, and fellow developers, to ensure the timely resolution of defects and the delivery of high-quality software.
+- Efficiently manage a high volume of Jira tickets to identify, analyze, and resolve software issues, with a primary focus on debugging and troubleshooting.
+- Utilize the debugging and code analysis features in IntelliJ to identify and resolve complex issues, resulting in enhanced software stability"
+ - title: "Technical Consulatant"
    company: "Jarvis"
    duration: "2022-present"
  # The project description must start with an action verb (https://bit.ly/3guO98u)
