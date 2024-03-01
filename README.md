@@ -7,6 +7,7 @@ I am a Computer Science graduate from Wilfrid Laurier University with a passion 
 **Proficient:** Python, Node.js, Angular, Express.js, RDBMS/SQL, Knex.js, Java, Git
 
 **Competent:** React.js, HTML/CSS, Agile/Scrum, C, Android Studio
+**Competent:** React.js, HTML/CSS, Agile/Scrum, C, Android Studio
 
 **Familiar:** Linux/Bash, Docker, PHP, Pandas, VBA
 
@@ -49,7 +50,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_CarlaCasta
 **Wilfrid Laurier University (2017-2022)**, Honours Bachelor of Science, Computer Science
 - Entrance Scholarship: Faculty of Science
 - Dean's List (2017, 2018): Faculty of Science
-- Dean's List (2020, 2021): Faculty of Science
+- Dean's List (2020, 2022): Faculty of Science
 - GPA: 10.56/12
 - Graduated With Distinction
 
