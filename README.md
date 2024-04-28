@@ -1,6 +1,6 @@
 # Carla Castaneda . Jarvis Consulting
 
-I am a Computer Science graduate from Wilfrid Laurier University with a passion for technology and education. I love helping others and learning about the problems that are affecting my community. As a result, I am most excited about how artificial Intelligence will progress and help better the lives of people by providing solutions for many global and local issues. I feel most fulfilled when I can help solve a problem using my creativity while also challenging myself and learning new skills. In my current role at Jarvis Consulting, I have strengthened my problem-solving skills and knowledge of object-oriented programming and APIs. I also picked up many new technical skills such as bash scripting and Agile development.
+Software developer with over a year of experience and a Computer Science degree from Wilfrid Laurier University, deeply passionate about technology and education. During my placement at Teranet through Jarvis Consulting, I collaborated seamlessly across teams to ensure the delivery of top-tier software solutions. Proficient in Jira ticket management and resolution, leveraging Java, Groovy, and XML. Eager to apply my expertise in addressing complex challenges and driving innovation.
 
 ## Skills
 
