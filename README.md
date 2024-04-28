@@ -26,7 +26,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_CarlaCasta
   - JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker PSQL instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in the database using CRUD operations and Customer objects, PSQL to access database, MVN, Docker, IntelliJ, and git/ GitHub.
   - Grep App: Developed a Grep (regex) style application in Java which can parse through a directory of Files, similar to the grep Linux command which returns matching strings from files. Able to recursively check a root directory and all its child directories for files that contain the regex pattern specified by the user in command line arguments and write the matching lines to a file also specified by the user. I have used several libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, and Regex API. The IDE used is Intelliji and docker was used for deployment. 
 
-**Twitter CRUD Web App** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda/tree/masterhttps://github.com/carlaac99/TwitterCrud)]:
+**Twitter CRUD Web App** [[GitHub]([https://github.com/jarviscanada/jarvis_data_eng_CarlaCastaneda/tree/masterhttps://github.com/carlaac99/TwitterCrud](https://github.com/carlaac99/TwitterCrud))]:
       
   - Created a twitter CRUD app to create delete and update tweets and usernames.
   - Technologies used: Angular to implement front end, Express.js to implement backend, and Knex.js used in the backend to connect to PostgreSQL database and build SQL queries.
