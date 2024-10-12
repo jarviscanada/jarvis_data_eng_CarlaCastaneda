@@ -1,0 +1,8 @@
+/home/centos/jarvis_data_eng_CarlaCastaneda/core_java/twitter/src/test/java/ca/jrvs/apps/twitter/controller/TwitterControllerIntTest.java
+/home/centos/jarvis_data_eng_CarlaCastaneda/core_java/twitter/src/test/java/ca/jrvs/apps/twitter/dao/TwitterDaoUnitTest.java
+/home/centos/jarvis_data_eng_CarlaCastaneda/core_java/twitter/src/test/java/ca/jrvs/apps/twitter/service/TwitterServiceUnitTest.java
+/home/centos/jarvis_data_eng_CarlaCastaneda/core_java/twitter/src/test/java/ca/jrvs/apps/twitter/controller/TwitterControllerUnitTest.java
+/home/centos/jarvis_data_eng_CarlaCastaneda/core_java/twitter/src/test/java/ca/jrvs/apps/twitter/model/TweetTest.java
+/home/centos/jarvis_data_eng_CarlaCastaneda/core_java/twitter/src/test/java/ca/jrvs/apps/twitter/service/TwitterServiceTest.java
+/home/centos/jarvis_data_eng_CarlaCastaneda/core_java/twitter/src/test/java/ca/jrvs/apps/twitter/dao/TwitterDaoIntTest.java
+/home/centos/jarvis_data_eng_CarlaCastaneda/core_java/twitter/src/test/java/ca/jrvs/apps/twitter/dao/helper/TwitterHttpHelperTest.java

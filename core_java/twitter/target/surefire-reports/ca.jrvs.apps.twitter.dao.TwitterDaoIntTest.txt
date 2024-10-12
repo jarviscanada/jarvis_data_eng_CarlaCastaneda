@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ca.jrvs.apps.twitter.dao.TwitterDaoIntTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in ca.jrvs.apps.twitter.dao.TwitterDaoIntTest
+create(ca.jrvs.apps.twitter.dao.TwitterDaoIntTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NullPointerException
+	at ca.jrvs.apps.twitter.dao.TwitterDaoIntTest.create(TwitterDaoIntTest.java:55)
+
