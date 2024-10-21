@@ -28,14 +28,14 @@ skills:
  - HTML/CSS
  - Agile/Scrum
  - C
- - Android Studio
+ - PHP
+ - VBA
  # At least 5 skills
  familiar:
  - Linux/Bash
  - Docker
- - PHP
  - Pandas
- - VBA
+ - Android Studio
 
 # List of Jarvis project
 jarvis_projects:
@@ -54,24 +54,24 @@ jarvis_projects:
       - "JDBC App: Developed CustomerDAO (data access object) which performs CRUD operations on customer table of hplussport database stored in docker PSQL instance. also contains a database connection Manager class to connect to JDBC URL which contains the database and host and username and password. Technologies used are JDBC to manipulate data in the database using CRUD operations and Customer objects, PSQL to access database, MVN, Docker, IntelliJ, and git/ GitHub."
       - "Grep App: Developed a Grep (regex) style application in Java which can parse through a directory of Files, similar to the grep Linux command which returns matching strings from files. Able to recursively check a root directory and all its child directories for files that contain the regex pattern specified by the user in command line arguments and write the matching lines to a file also specified by the user. I have used several libraries and API's such as Stream, Arrays, ArrayList Lambda expressions, and Regex API. The IDE used is Intelliji and docker was used for deployment. "
 
-- name: "Twitter CRUD Web App"
-  git_url: "https://github.com/carlaac99/TwitterCrud"
-  description:
-      - "Created a twitter CRUD app to create delete and update tweets and usernames."
-      - "Technologies used: Angular to implement front end, Express.js to implement backend, and Knex.js used in the backend to connect to PostgreSQL database and build SQL queries."
-  
 # List of personal or academic projects
 # Feel free to add more projects
 highlighted_projects:
- #project name
- - name: "CuddleBug App"
- #URL is optional
-   git_url: "https://github.com/carlaac99/CP470finalproject"
- # The project description must start with an action verb (https://bit.ly/3guO98u)
-   description:  Developed an Android application that allows users to create a movie list based on suggested movies and view movies in common with friends. Users swipe through movie titles and their posters, swiping left for dislike and right for movies they like. The movies they like then get added to their movie list called 'MyList'. For users to add friends, they must add. Used Google Firebase to implement user login, MongoDB to store users and movies, and our REST API to GET movies and their data on Android Studio with Java as the programming language.
+
+ - name: "Twitter Crud"
+ - git_url: "https://github.com/carlaac99/TwitterCrud"
+   description: Created a twitter CRUD app to create delete and update tweets and usernames. Technologies used were Angular to implement front end, Express.js to implement backend, and Knex.js used in the backend to connect to PostgreSQL database and build SQL queries.
+
+ - name: "Angular Trading App"
+ - git_url: "https://github.com/carlaac99/Angular_Trading_App/tree/feature/frontend-setup"
+   description: 
+
+  #project name
  - name: "Sudoku Puzzle Solver"
+  #URL is optional
    git_url: "https://github.com/carlaac99/CP476-FinalProject"
-   description: Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the time the puzzles take to solve. Can solve puzzles randomly generated or take user input. Allows the user to solve puzzles of varying difficulties and highlights the sudoku box in red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB
+   # The project description must start with an action verb (https://bit.ly/3guO98u)
+   description: Implemented the AC-3 Algorithm (Arc consistency algorithm) and backtracking that can solve a sudoku puzzle. Used MongoDB database to store user names and the time the puzzles take to solve. Can solve puzzles randomly generated or take user input. Allows the user to solve puzzles of varying difficulties and highlights the sudoku box in red if the user input violates the sudoku puzzle constraints and will not allow for any other inputs except numbers to be entered. Used Javascript, Node.js, React, Flask, Python, HTML/CSS, MongoDB.
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
 #The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, and communication).
@@ -81,7 +81,11 @@ professional_experience:
    company: "Teranet"
    duration: "Jan. 2023- April 2024"
  # The project description must start with an action verb (https://bit.ly/3guO98u)
-   description: " Collaborated with cross-functional teams, including QA, product managers, and fellow developers, to ensure the timely resolution of defects and the delivery of high-quality software. Efficiently managed a high volume of Jira tickets to identify, analyze, and resolve software issues, with a primary focus on debugging and troubleshooting. Utilized the debugging and code analysis features in IntelliJ to identify and resolve complex issues, resulting in enhanced software stability. Contributed as a member of the Application Management Support team dedicated to the 'SEDAR+' project, specializing in defect management to ensure the timely resolution of issues raised by users."
+   description: 
+      - "Collaborated with cross-functional teams (QA, product managers, developers) to ensure the timely resolution of defects, resulting in a 15% reduction in critical software bugs and contributing to the on-schedule delivery of high-quality software."
+      - "Efficiently managed and processed over 200 Jira tickets per month, focusing on identifying, analyzing, and resolving soft are issues. Demonstrated strong debugging and troubleshooting skills, leading to a 20% decrease in issue resolution time."
+      - "Contributed to the 'SEDAR+' project as part of the Application Management Support team, specializing in defect management, which improved user-reported issue resolution times by 25%."
+      - "Developed and implemented solutions using Java, Groovy, XML, and Spring Boot to align with • business requirements."
  - title: "Technical Consultant"
    company: "Jarvis"
    duration: "July 2022-present"
